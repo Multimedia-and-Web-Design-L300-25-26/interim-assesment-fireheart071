@@ -184,7 +184,7 @@ export const Landing = () => {
                 <div className="flex flex-col md:flex-row w-full gap-12 justify-center items-center">
                     <div className="w-full md:w-1/2">
                         <div className="bg-[#f0f2f5] rounded-[48px] p-4 flex justify-center items-center">
-                            <img src="/marketing_banner_1.avif" alt="App Mobile Preview" className="w-full max-w-[400px] min-h-[350px] object-contain" />
+                            <img src="/Hero__4_.avif" alt="App Mobile Preview" className="w-full max-w-[400px] min-h-[350px] object-contain" />
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 flex flex-col gap-6">

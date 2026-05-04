@@ -32,7 +32,7 @@ export default function DebitCard() {
           <div className="w-full lg:w-1/2">
             <div className="bg-white rounded-[48px] p-8 sm:p-16 shadow-2xl relative overflow-hidden">
               <img
-                src="/marketing_banner_1.avif"
+                src="/Hero__4_.avif"
                 alt="Debit Card App"
                 className="w-full h-auto object-contain relative z-10"
               />

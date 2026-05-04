@@ -11,19 +11,19 @@
 
 @font-face {
   font-family: 'Rethink Sans';
-  src: url('../src/assets/fonts/RethinkSans-Regular.ttf');
+  src: url('/RethinkSans-Regular.ttf');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'Rethink Sans';
-  src: url('../src/assets/fonts/RethinkSans-Bold.ttf');
+  src: url('/RethinkSans-Bold.ttf');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'Rethink Sans';
-  src: url('../src/assets/fonts/RethinkSans-Medium.ttf');
+  src: url('/RethinkSans-Medium.ttf');
   font-weight: 500;
 }
 
