@@ -6,6 +6,7 @@ const dotenv = require('dotenv');
 
 // Load environment variables
 dotenv.config();
+dotenv.config({ path: '.env.local', override: true });
 
 const app = express();
 
