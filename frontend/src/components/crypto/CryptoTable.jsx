@@ -1,14 +1,11 @@
 import React from "react";
-import {ChevronsUpDown} from "lucide-react";
-
-const rows = [
-  { id: 1, name: "Bitcoin Cash", symbol: "BCH", price: "GHS 4,827.01", change: "-1.21%", series: [1,2,3,2,3,4,3,4,3], color: "#16a34a", market: "GHS 96.9B", volume: "GHS 2.9B" },
-  { id: 2, name: "UNUS SED LEO", symbol: "LEO", price: "GHS 97.59", change: "+0.24%", series: [1,1.5,2,1.8,2.3,2.6,2.8], color: "#0ea5e9", market: "GHS 89.9B", volume: "GHS 7.3M" },
-  { id: 3, name: "Hyperliquid", symbol: "HYPE", price: "GHS 333.13", change: "+1.78%", series: [2,2.3,2.1,2.5,2.8,3], color: "#16a34a", market: "GHS 86.3B", volume: "GHS 2.5B" },
-];
+import { ChevronsUpDown, Loader2 } from "lucide-react";
 
 function MiniSpark({ points = [], color = "#16a34a" }) {
-  if (!points || points.length === 0) return null;
+  if (!points || points.length === 0) {
+    // Generate dummy points if none provided
+    points = [1, 2, 1.5, 3, 2.5, 4];
+  }
   const w = 64;
   const h = 28;
   const min = Math.min(...points);
@@ -29,56 +26,73 @@ function MiniSpark({ points = [], color = "#16a34a" }) {
   );
 }
 
-export const CryptoTable = () => {
+export const CryptoTable = ({ cryptos = [], loading }) => {
   return (
     <div className="bg-white rounded-lg shadow-sm border border-slate-200">
       <div className="p-4 border-b border-slate-100 flex items-center justify-between">
         <h2 className="text-lg font-semibold text-slate-900">Crypto market prices</h2>
         <div className="text-sm text-slate-600">Updated just now</div>
       </div>
-      <div className="overflow-x-auto">
-        <table className="min-w-full text-left">
-          <thead className="text-slate-500 text-sm">
-            <tr>
-              <th className="px-4 py-3 w-8" />
-              <th className="px-4 py-3">Asset <span className="inline-block align-middle"><ChevronsUpDown size={14} className="inline-block ml-1" /></span></th>
-              <th className="px-4 py-3">Market price <span className="inline-block align-middle"><ChevronsUpDown size={14} className="inline-block ml-1" /></span></th>
-              <th className="px-4 py-3">Chart</th>
-              <th className="px-4 py-3">Change <span className="inline-block align-middle"><ChevronsUpDown size={14} className="inline-block ml-1" /></span></th>
-              <th className="px-4 py-3">Mkt cap <span className="inline-block align-middle"><ChevronsUpDown size={14} className="inline-block ml-1" /></span></th>
-              <th className="px-4 py-3">Volume <span className="inline-block align-middle"><ChevronsUpDown size={14} className="inline-block ml-1" /></span></th>
-              <th className="px-4 py-3">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {rows.map((r) => (
-              <tr key={r.id} className="border-t border-slate-100 hover:bg-slate-50">
-                <td className="px-4 py-4 text-sm text-slate-500">☆</td>
-                <td className="px-4 py-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center text-sm font-semibold text-slate-700">
-                      {r.symbol}
-                    </div>
-                    <div>
-                      <div className="font-medium text-slate-900">{r.name}</div>
-                      <div className="text-sm text-slate-500">{r.symbol}</div>
-                    </div>
-                  </div>
-                </td>
-                <td className="px-4 py-4 font-medium text-slate-900">{r.price}</td>
-                <td className="px-4 py-4"><MiniSpark points={r.series} color={r.color} /></td>
-                <td className={`px-4 py-4 ${r.change.startsWith("+") ? "text-green-600" : "text-red-600"}`}>{r.change}</td>
-                <td className="px-4 py-4 text-slate-700">{r.market}</td>
-                <td className="px-4 py-4 text-slate-700">{r.volume}</td>
-                <td className="px-4 py-4">
-                  <button className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 shadow">Trade</button>
-                </td>
+      <div className="overflow-x-auto min-h-[200px]">
+        {loading ? (
+          <div className="flex flex-col items-center justify-center py-20 gap-4">
+             <Loader2 className="animate-spin text-blue-600" size={40} />
+             <p className="text-slate-500 font-medium">Loading assets...</p>
+          </div>
+        ) : (
+          <table className="min-w-full text-left">
+            <thead className="text-slate-500 text-sm">
+              <tr>
+                <th className="px-4 py-3 w-8" />
+                <th className="px-4 py-3">Asset <span className="inline-block align-middle"><ChevronsUpDown size={14} className="inline-block ml-1" /></span></th>
+                <th className="px-4 py-3 text-right">Market price <span className="inline-block align-middle"><ChevronsUpDown size={14} className="inline-block ml-1" /></span></th>
+                <th className="px-4 py-3">Chart</th>
+                <th className="px-4 py-3">Change <span className="inline-block align-middle"><ChevronsUpDown size={14} className="inline-block ml-1" /></span></th>
+                <th className="px-4 py-3 hidden md:table-cell">Actions</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {cryptos.map((crypto) => (
+                <tr key={crypto._id} className="border-t border-slate-100 hover:bg-slate-50 group transition-colors">
+                  <td className="px-4 py-4 text-sm text-slate-400 hover:text-yellow-500 cursor-pointer">☆</td>
+                  <td className="px-4 py-4">
+                    <div className="flex items-center gap-3">
+                      <img src={crypto.image} alt={crypto.name} className="w-10 h-10 rounded-full" />
+                      <div>
+                        <div className="font-bold text-slate-900">{crypto.name}</div>
+                        <div className="text-sm text-slate-500">{crypto.symbol}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="px-4 py-4 font-bold text-slate-900 text-right">
+                    ${crypto.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  </td>
+                  <td className="px-4 py-4">
+                    <MiniSpark 
+                      points={crypto.change24h >= 0 ? [1, 2, 1.5, 3, 2.5, 4] : [4, 3, 3.5, 2, 2.5, 1]} 
+                      color={crypto.change24h >= 0 ? "#16a34a" : "#dc2626"} 
+                    />
+                  </td>
+                  <td className={`px-4 py-4 font-bold ${crypto.change24h >= 0 ? "text-green-600" : "text-red-600"}`}>
+                    {crypto.change24h >= 0 ? "+" : ""}{crypto.change24h}%
+                  </td>
+                  <td className="px-4 py-4 hidden md:table-cell">
+                    <button className="bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold opacity-0 group-hover:opacity-100 transition-opacity hover:bg-blue-700 shadow-sm">
+                      Trade
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
-      <div className="p-4 border-t border-slate-100 text-sm text-slate-500">Showing top {rows.length} assets</div>
+      {!loading && cryptos.length === 0 && (
+         <div className="p-10 text-center text-slate-500">No assets found matching your search.</div>
+      )}
+      <div className="p-4 border-t border-slate-100 text-sm text-slate-500">
+        Showing {cryptos.length} assets
+      </div>
     </div>
   );
 };

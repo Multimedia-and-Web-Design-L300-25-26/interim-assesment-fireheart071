@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "../common/button";
 import { HoverCard } from "../common/hovercard";
 import { Link } from "react-router-dom";
@@ -110,6 +110,14 @@ export const LandingHeader = ({ blue }) => {
         { name: 'Alphabet', symbol: 'GOOGL', price: 'GHS 301.82', change: '1.12%' },
     ]
 
+    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
+
+    useEffect(() => {
+        const checkLogin = () => setIsLoggedIn(!!localStorage.getItem('token'));
+        window.addEventListener('storage', checkLogin);
+        return () => window.removeEventListener('storage', checkLogin);
+    }, []);
+
     const handleHover = (data, category) => {
         const side = SideInfo.find(s => s.title === category);
         setActiveMenu({ data, side });
@@ -150,8 +158,16 @@ export const LandingHeader = ({ blue }) => {
                         <button onClick={() => { setShowLang((s) => !s); setMobileOpen(false); }} className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
                             <Globe size={18} />
                         </button>
-                        <Link to='/signin'><Button text="Sign in" className='px-3 py-2' /></Link>
-                        <Link to="/signup"><Button text="Sign up" blue={true} className='px-3 py-2' /></Link>
+                        {isLoggedIn ? (
+                             <Link to="/profile">
+                                <Button text="Account" className="px-4 py-2 bg-blue-50 text-blue-600 font-bold" />
+                             </Link>
+                        ) : (
+                            <>
+                                <Link to='/signin'><Button text="Sign in" className='px-3 py-2' /></Link>
+                                <Link to="/signup"><Button text="Sign up" blue={true} className='px-3 py-2' /></Link>
+                            </>
+                        )}
                         <button className="p-2 rounded-md" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
                             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
                         </button>
@@ -162,8 +178,16 @@ export const LandingHeader = ({ blue }) => {
                         <button onClick={() => { setShowLang((s) => !s); setMobileOpen(false); }} className="w-10 h-10 rounded-full bg-gray-100 hidden lg:inline-flex items-center justify-center">
                             <Globe size={18} />
                         </button>
-                        <Link to='/signin' ><Button text="Sign in" className='px-3 py-2 text-sm hidden lg:inline-flex' /></Link>
-                        <Link to='/signup'><Button text="Sign up" blue={true} className='px-3 py-2 text-sm' /></Link>
+                        {isLoggedIn ? (
+                             <Link to="/profile">
+                                <Button text="Account" className="px-4 py-2 bg-blue-50 text-blue-600 font-bold" />
+                             </Link>
+                        ) : (
+                            <>
+                                <Link to='/signin' ><Button text="Sign in" className='px-3 py-2 text-sm hidden lg:inline-flex' /></Link>
+                                <Link to='/signup'><Button text="Sign up" blue={true} className='px-3 py-2 text-sm' /></Link>
+                            </>
+                        )}
                         <button className="p-2 rounded-md" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Toggle menu">
                             {mobileOpen ? <X size={20} /> : <Menu size={20} />}
                         </button>

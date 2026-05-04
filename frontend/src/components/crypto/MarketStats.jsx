@@ -39,11 +39,12 @@ function Sparkline({ points = [], color = "#16a34a" }) {
   );
 }
 
-export const MarketStats = () => {
+export const MarketStats = ({ cryptos = [] }) => {
+  // We can derive some stats if needed, e.g. total tradeable assets
   const stats = [
-    { title: "Total market cap", value: "GHS 24.34T", change: "+0.35%", series: sampleSeries[0], color: "#16a34a" },
-    { title: "Trade volume", value: "GHS 1.83T", change: "+64.55%", series: sampleSeries[1], color: "#16a34a" },
-    { title: "Buy-sell ratio", value: "GHS 0.76", change: "+0.58%", series: sampleSeries[2], color: "#16a34a" },
+    { title: "Total market cap", value: "$2.43T", change: "+0.35%", series: sampleSeries[0], color: "#16a34a" },
+    { title: "Trade volume", value: "$183B", change: "+64.55%", series: sampleSeries[1], color: "#16a34a" },
+    { title: "Tradable assets", value: cryptos.length, change: "Active", series: sampleSeries[2], color: "#16a34a" },
     { title: "BTC dominance", value: "60.06%", change: "-0.18%", series: sampleSeries[3], color: "#dc2626" },
   ];
 

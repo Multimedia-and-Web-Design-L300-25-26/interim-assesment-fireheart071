@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MarketStats from "../components/crypto/MarketStats";
 import CryptoTable from "../components/crypto/CryptoTable";
-import { Search, ChevronLeft, ChevronRight } from "lucide-react";
+import { Search, ChevronLeft, ChevronRight, Loader2 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import { getAllCryptos, getTopGainers, getNewListings } from "../utils/api";
 
-const Sidebar = () => (
+const Sidebar = ({ gainers, newListings, loading }) => (
   <div className="space-y-6">
-  <div className="p-4 bg-gradient-to-br from-blue-600 to-blue-500 text-white rounded-lg shadow-md border border-transparent">
+    <div className="p-4 bg-gradient-to-br from-blue-600 to-blue-500 text-white rounded-lg shadow-md border border-transparent">
       <div className="flex items-start justify-between gap-3">
         <div>
           <h4 className="font-semibold">Get started</h4>
@@ -34,40 +35,26 @@ const Sidebar = () => (
       </div>
 
       <div className="mt-3">
-      <div className="flex gap-3 overflow-x-auto no-scrollbar items-stretch py-1">
-          <div className="min-w-[160px] bg-slate-100 rounded-xl p-3 flex-shrink-0">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-green-400 flex items-center justify-center text-white text-xs">F</div>
-              <div>
-                <div className="text-sm font-medium">FAI</div>
-                <div className="text-xs text-slate-500">GHS 0.0866</div>
+        {loading ? (
+          <div className="flex justify-center py-4"><Loader2 className="animate-spin text-blue-600" /></div>
+        ) : (
+          <div className="flex gap-3 overflow-x-auto no-scrollbar items-stretch py-1">
+            {gainers.map((crypto) => (
+              <div key={crypto._id} className="min-w-[160px] bg-slate-100 rounded-xl p-3 flex-shrink-0">
+                <div className="flex items-center gap-3">
+                  <img src={crypto.image} alt={crypto.name} className="w-8 h-8 rounded-full" />
+                  <div>
+                    <div className="text-sm font-medium">{crypto.symbol}</div>
+                    <div className="text-xs text-slate-500">${crypto.price.toLocaleString()}</div>
+                  </div>
+                </div>
+                <div className={`mt-2 text-sm font-semibold ${crypto.change24h >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                  {crypto.change24h >= 0 ? '▲' : '▼'} {Math.abs(crypto.change24h)}%
+                </div>
               </div>
-            </div>
-            <div className="mt-2 text-sm text-green-600 font-semibold">▲ 25.72%</div>
+            ))}
           </div>
-
-          <div className="min-w-[160px] bg-slate-100 rounded-xl p-3 flex-shrink-0">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-pink-400 flex items-center justify-center text-white text-xs">P</div>
-              <div>
-                <div className="text-sm font-medium">POLS</div>
-                <div className="text-xs text-slate-500">GHS 0.65</div>
-              </div>
-            </div>
-            <div className="mt-2 text-sm text-red-600 font-semibold">▼ 24.52%</div>
-          </div>
-
-          <div className="min-w-[160px] bg-slate-100 rounded-xl p-3 flex-shrink-0">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-white text-xs">PR</div>
-              <div>
-                <div className="text-sm font-medium">PRCL</div>
-                <div className="text-xs text-slate-500">GHS 0.17</div>
-              </div>
-            </div>
-            <div className="mt-2 text-sm text-red-600 font-semibold">▼ 18.25%</div>
-          </div>
-        </div>
+        )}
       </div>
     </div>
 
@@ -83,52 +70,66 @@ const Sidebar = () => (
       </div>
 
       <div className="mt-3">
-        <div className="flex gap-3 overflow-x-auto no-scrollbar py-1">
-          <div className="min-w-[140px] bg-slate-100 rounded-xl p-3 flex-shrink-0">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-white text-xs">H</div>
-              <div>
-                <div className="text-sm font-medium">HYPE</div>
-                <div className="text-xs text-slate-500">Hyperliquid · Added Feb 5</div>
+        {loading ? (
+          <div className="flex justify-center py-4"><Loader2 className="animate-spin text-blue-600" /></div>
+        ) : (
+          <div className="flex gap-3 overflow-x-auto no-scrollbar py-1">
+            {newListings.map((crypto) => (
+              <div key={crypto._id} className="min-w-[140px] bg-slate-100 rounded-xl p-3 flex-shrink-0">
+                <div className="flex items-center gap-3">
+                  <img src={crypto.image} alt={crypto.name} className="w-8 h-8 rounded-full" />
+                  <div>
+                    <div className="text-sm font-medium">{crypto.symbol}</div>
+                    <div className="text-xs text-slate-500">{crypto.name}</div>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-
-          <div className="min-w-[140px] bg-slate-100 rounded-xl p-3 flex-shrink-0">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-white text-xs">J</div>
-              <div>
-                <div className="text-sm font-medium">JUPITER</div>
-                <div className="text-xs text-slate-500">Added Dec 9</div>
-              </div>
-            </div>
-          </div>
-
-          <div className="min-w-[140px] bg-slate-100 rounded-xl p-3 flex-shrink-0">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-slate-800 flex items-center justify-center text-white text-xs">L</div>
-              <div>
-                <div className="text-sm font-medium">LIGHTER</div>
-                <div className="text-xs text-slate-500">Added Jan 15</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   </div>
 );
 
 export function Explore() {
+  const [cryptos, setCryptos] = useState([]);
+  const [gainers, setGainers] = useState([]);
+  const [newListings, setNewListings] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [allRes, gainersRes, newRes] = await Promise.all([
+          getAllCryptos(),
+          getTopGainers(),
+          getNewListings()
+        ]);
+        setCryptos(allRes.data.data);
+        setGainers(gainersRes.data.data);
+        setNewListings(newRes.data.data);
+      } catch (err) {
+        console.error("Error fetching crypto data:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const filteredCryptos = cryptos.filter(c => 
+    c.name.toLowerCase().includes(search.toLowerCase()) || 
+    c.symbol.toLowerCase().includes(search.toLowerCase())
+  );
+
   return (
-    <div className="bg-slate-50 py-8">
-        <Helmet>
-            <title>Explore — Coinbase Clone</title>
-          </Helmet>
+    <div className="bg-slate-50 py-8 min-h-screen">
+      <Helmet>
+        <title>Explore — Coinbase Clone</title>
+      </Helmet>
       <div className="container mx-auto px-4">
-
-        {/* header moved into main column so it aligns with stats and sidebar */}
-
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           <div className="md:col-span-3">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-4 gap-4">
@@ -139,7 +140,13 @@ export function Explore() {
               <div className="w-3/4 md:w-1/3 lg:w-2/5">
                 <div className="flex items-center bg-gray-100 rounded-full px-4 py-2">
                   <Search size={16} className="text-slate-400" />
-                  <input aria-label="Search" className="ml-3 w-full outline-none placeholder-slate-400 text-sm" placeholder="Search for an asset" />
+                  <input 
+                    aria-label="Search" 
+                    className="ml-3 w-full outline-none placeholder-slate-400 text-sm bg-transparent" 
+                    placeholder="Search for an asset" 
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                  />
                 </div>
               </div>
             </div>
@@ -158,12 +165,12 @@ export function Explore() {
               </div>
             </div>
 
-            <MarketStats />
-            <CryptoTable />
+            <MarketStats cryptos={cryptos} />
+            <CryptoTable cryptos={filteredCryptos} loading={loading} />
           </div>
           <aside className="md:col-span-1 md:self-start">
             <div className="md:sticky md:top-16">
-              <Sidebar />
+              <Sidebar gainers={gainers} newListings={newListings} loading={loading} />
             </div>
           </aside>
         </div>

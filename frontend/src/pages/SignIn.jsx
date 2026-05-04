@@ -1,4 +1,8 @@
+import { useState, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
+import { Apple, Globe, Key } from "lucide-react";
 import { loginUser } from "../utils/api";
+import { Helmet } from "react-helmet-async";
 
 export function SignIn() {
   const [email, setEmail] = useState("");
@@ -28,14 +32,14 @@ export function SignIn() {
   return (
     <div className=" bg-[#070809] text-white relative overscroll-x-none overflow-x-hidden">
       <Helmet>
-            <title>Sign In — Coinbase Clone</title>
-          </Helmet>
+        <title>Sign In — Coinbase Clone</title>
+      </Helmet>
       <header className="fixed top-0 left-0 right-0 flex items-center justify-between px-6 py-4">
         <div className="flex items-center">
-            <Link to="/">
-              <img src="/coinbase.png" className="h-10 w-10 filter-[brightness(0)_saturate(100%)_invert(100%)_sepia(10%)_saturate(657%)_hue-rotate(230deg)_brightness(111%)_contrast(100%)]" alt="" />
-            </Link>
-          </div>
+          <Link to="/">
+            <img src="/coinbase.png" className="h-10 w-10 filter-[brightness(0)_saturate(100%)_invert(100%)_sepia(10%)_saturate(657%)_hue-rotate(230deg)_brightness(111%)_contrast(100%)]" alt="" />
+          </Link>
+        </div>
       </header>
 
       <main className="min-h-screen flex items-center justify-center px-4 pt-40">

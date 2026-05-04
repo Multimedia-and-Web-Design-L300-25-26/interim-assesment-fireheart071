@@ -4,6 +4,8 @@ import { Explore } from "./pages/Explore.jsx";
 import { Landing } from "./pages/Landing.jsx";
 import { SignUp} from "./pages/SignUp.jsx";
 import {SignIn } from "./pages/SignIn.jsx"
+import Profile from "./pages/Profile.jsx";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 // Individuals
 import BuyAndSell from "./pages/Individuals/buyandsell.jsx";
@@ -56,6 +58,10 @@ function App() {
       <Route element={<MainLayout />}>
         <Route path="/" element={<Landing />} />
         <Route path="/explore" element={<Explore />} />
+        
+        <Route element={<ProtectedRoute />}>
+          <Route path="/profile" element={<Profile />} />
+        </Route>
 
         {/* Individuals */}
         <Route path="/individuals/buyandsell" element={<BuyAndSell />} />
