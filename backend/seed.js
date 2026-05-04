@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const Crypto = require('./models/Crypto');
 
 dotenv.config();
+dotenv.config({ path: '.env.local', override: true });
 
 const cryptos = [
     {
