@@ -138,9 +138,9 @@ export const Landing = () => (
                         <p className="text-gray-500 text-lg leading-relaxed max-w-lg">
                             Powerful analytical tools with the safety and security of Coinbase deliver the ultimate trading experience. Tap into sophisticated charting capabilities, real-time order books, and deep liquidity across hundreds of markets.
                         </p>
-                        <div>
+                        <Link to="/individuals/advanced">
                             <Button black text='Start trading' className="px-8 py-4 font-semibold rounded-full hover:bg-gray-800" />
-                        </div>
+                        </Link>
                     </div>
                 </div>
 
@@ -159,9 +159,9 @@ export const Landing = () => (
                         <p className="text-gray-500 text-lg leading-relaxed max-w-md">
                             Get more out of crypto with one membership: zero trading fees, boosted rewards, priority support, and more.
                         </p>
-                        <div>
+                        <Link to="/individuals/coinbaseone">
                             <Button black text='Claim free trial' className="px-8 py-4 font-semibold rounded-full hover:bg-gray-800" />
-                        </div>
+                        </Link>
                     </div>
                     <div className="w-full md:w-1/2 order-1 md:order-2 px-4 sm:px-0">
                         <div className="bg-[#f0f2f5] rounded-[32px] p-6 sm:p-12 flex justify-center items-center shadow-inner">
@@ -189,9 +189,9 @@ export const Landing = () => (
                         <p className="text-gray-500 text-lg leading-relaxed max-w-md">
                             An everything app to trade, create, discover, and chat, all in one place.
                         </p>
-                        <div>
+                        <Link to="/individuals/baseapp">
                             <Button black text='Learn more' className="px-8 py-4 font-semibold rounded-full hover:bg-gray-800" />
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </section>
@@ -205,7 +205,9 @@ export const Landing = () => (
                             <p className="text-gray-500 text-lg">
                                 Beginner guides, practical tips, and market updates for first-timers, experienced investors, and everyone in between
                             </p>
-                            <Button text="Read More" className="px-8 py-4 font-semibold rounded-full w-fit" black />
+                            <Link to="/individuals/learn">
+                                <Button text="Read More" className="px-8 py-4 font-semibold rounded-full w-fit" black />
+                            </Link>
                         </div>
                     </div>
 

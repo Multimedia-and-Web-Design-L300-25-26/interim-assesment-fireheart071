@@ -15,14 +15,14 @@ import {
 export const LandingHeader = ({ blue }) => {
 
     const Individuals = [
-        { title: "Buy and sell", description: "Buy, sell and use crypto", icon: ArrowLeftRight, link: "/signup" },
+        { title: "Buy and sell", description: "Buy, sell and use crypto", icon: ArrowLeftRight, link: "/individuals/buyandsell" },
         { title: "Advanced", description: "Professional-grade trading tools", icon: LineChart, link: "/individuals/advanced" },
         { title: "Base App", description: "Post, earn, trade, and chat, all in one place rewards", icon: Hexagon, link: "/individuals/baseapp" },
         { title: "Earn", description: "Stake your crypto and earn rewards", icon: Coins, link: "/individuals/earn" },
         { title: "Coinbase One", description: "Get zero trading fees and more", icon: Star, link: "/individuals/coinbaseone" },
         { title: "Private Client", description: "For trusts, family offices, UHNWIs", icon: Briefcase, link: "/individuals/privateclient" },
         { title: "Credit Card", description: "Earn up to 4% bitcoin back", icon: CreditCard, link: "/individuals/creditcard" },
-        { title: "Onchain", description: "Dive into the world of onchain apps", icon: Link, link: "/individuals/onchain" },
+        { title: "Onchain", description: "Dive into the world of onchain apps", icon: Globe, link: "/individuals/onchain" },
         { title: "Debit Card", description: "Spend crypto, get crypto back", icon: Wallet, link: "/individuals/debitcard" },
         { title: "Learn", description: " Crypto tips and guides", icon: BookOpen, link: "/individuals/learn" },
     ]
