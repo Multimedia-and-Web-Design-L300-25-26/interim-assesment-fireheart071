@@ -1,15 +1,28 @@
-import React, { useState } from "react";
-import { Search, X, Key, Globe, Apple } from "lucide-react";
-import { Link, useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
+import { loginUser } from "../utils/api";
 
 export function SignIn() {
   const [email, setEmail] = useState("");
-  const navigate = useNavigate?.() || (() => {});
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleContinue = (e) => {
+  const handleContinue = async (e) => {
     e.preventDefault();
-    navigate("/");
+    setError("");
+    setLoading(true);
+
+    try {
+      const response = await loginUser({ email, password });
+      if (response.data.success) {
+        localStorage.setItem('token', response.data.token);
+        navigate("/");
+      }
+    } catch (err) {
+      setError(err.response?.data?.message || "Login failed. Please check your credentials.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -29,6 +42,8 @@ export function SignIn() {
         <div className="w-full sm:w-[30%] max-w-md">
           <h1 className="text-2xl font-bold mb-3">Sign in to Coinbase</h1>
 
+          {error && <div className="bg-red-500/20 text-red-500 p-3 rounded-md mb-4 text-sm">{error}</div>}
+
           <form onSubmit={handleContinue} className="space-y-4">
             <label className="block text-sm text-slate-300">Email</label>
             <input
@@ -37,14 +52,25 @@ export function SignIn() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email address"
               className="w-full bg-transparent border border-slate-700 rounded-md px-4 py-3 placeholder-slate-500 focus:outline-none focus:border-blue-500"
+              required
+            />
+
+            <label className="block text-sm text-slate-300">Password</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your password"
+              className="w-full bg-transparent border border-slate-700 rounded-md px-4 py-3 placeholder-slate-500 focus:outline-none focus:border-blue-500"
+              required
             />
 
             <button
               type="submit"
-              disabled={!email}
-              className={`w-full rounded-full py-3 font-semibold ${email ? 'bg-[#2d4a8f]' : 'bg-slate-800 text-slate-400'}`}
+              disabled={loading || !email || !password}
+              className={`w-full rounded-full py-3 font-semibold transition-all ${email && password && !loading ? 'bg-[#2d4a8f] hover:bg-[#3a5bb3]' : 'bg-slate-800 text-slate-400 cursor-not-allowed'}`}
             >
-              Continue
+              {loading ? "Signing in..." : "Continue"}
             </button>
 
             <div className="flex items-center gap-3 text-sm text-slate-500">
