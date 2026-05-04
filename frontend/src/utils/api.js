@@ -10,6 +10,20 @@ const api = axios.create({
     }
 });
 
+// Add a request interceptor to attach the token
+api.interceptors.request.use(
+    (config) => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            config.headers.Authorization = `Bearer ${token}`;
+        }
+        return config;
+    },
+    (error) => {
+        return Promise.reject(error);
+    }
+);
+
 // Auth API
 export const registerUser = (userData) => api.post('/auth/register', userData);
 export const loginUser = (userData) => api.post('/auth/login', userData);

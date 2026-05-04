@@ -35,7 +35,8 @@ exports.register = async (req, res) => {
             res.cookie('token', token, {
                 httpOnly: true,
                 expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days
-                secure: process.env.NODE_ENV === 'production'
+                secure: process.env.NODE_ENV === 'production',
+                sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
             });
 
             res.status(201).json({
@@ -76,7 +77,8 @@ exports.login = async (req, res) => {
         res.cookie('token', token, {
             httpOnly: true,
             expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days
-            secure: process.env.NODE_ENV === 'production'
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax'
         });
 
         res.json({
