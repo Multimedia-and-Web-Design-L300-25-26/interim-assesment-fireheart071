@@ -7,7 +7,7 @@ export default function PaymentFirms() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Crypto Solutions for Payment Firms —  </title>
+        <title>Crypto Solutions for Payment Firms</title>
       </Helmet>
 
       {/* Hero Section */}

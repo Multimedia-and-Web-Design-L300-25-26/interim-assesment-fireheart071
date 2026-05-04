@@ -7,7 +7,7 @@ export default function Payments() {
   return (
     <div className="bg-[#f8f9fb] min-h-screen">
       <Helmet>
-        <title>Global Payments Infrastructure —  </title>
+        <title>Global Payments Infrastructure</title>
       </Helmet>
 
       {/* Hero Section */}

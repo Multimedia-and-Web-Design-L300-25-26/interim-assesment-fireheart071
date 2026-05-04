@@ -45,7 +45,7 @@ export function SignUp() {
       <main className="min-h-screen flex items-center justify-center px-4 pt-40">
         <div className="w-full sm:w-[30%]  max-w-md">
           <h1 className="text-2xl font-bold mb-3">Create your account</h1>
-          <p className="text-sm text-slate-400 mb-6">Access all that  has to offer with a single account.</p>
+          <p className="text-sm text-slate-400 mb-6">Access all that our platform has to offer with a single account.</p>
 
           {error && <div className="bg-red-500/20 text-red-500 p-3 rounded-md mb-4 text-sm">{error}</div>}
 
@@ -89,9 +89,9 @@ export function SignUp() {
             </button>
 
             <div className="flex items-center gap-3 text-sm text-slate-500">
-              <div className="flex-grow h-px bg-slate-800" />
+              <div className="grow h-px bg-slate-800" />
               <div>OR</div>
-              <div className="flex-grow h-px bg-slate-800" />
+              <div className="grow h-px bg-slate-800" />
             </div>
 
             <button type="button" className="w-full rounded-full py-3 bg-[#282B31] flex items-center gap-3 justify-center">

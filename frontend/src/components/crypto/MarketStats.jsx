@@ -52,7 +52,7 @@ export const MarketStats = ({ cryptos = [] }) => {
     <div className="overflow-x-auto no-scrollbar mb-6">
       <div className="flex gap-4 py-2">
       {stats.map((s, i) => (
-        <div key={i} className="p-4 bg-gray-200 rounded-lg border border-slate-200 min-w-[260px] flex-shrink-0">
+        <div key={i} className="p-4 bg-gray-200 rounded-lg border border-slate-200 min-w-[260px] shrink-0">
           <div className="text-sm text-slate-700">{s.title}</div>
           <div className="mt-2 flex items-center justify-between">
             <div>

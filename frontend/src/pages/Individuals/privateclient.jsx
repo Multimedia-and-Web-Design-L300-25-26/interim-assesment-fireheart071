@@ -19,7 +19,7 @@ export default function PrivateClient() {
           </div>
           <h1 className="text-5xl sm:text-8xl font-medium tracking-tight leading-tight mb-10">
             Tailored solutions for <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">wealth builders.</span>
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-600">wealth builders.</span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mb-12">
             A dedicated team and personalized services designed for high-net-worth individuals, family offices, and institutions.
@@ -31,7 +31,7 @@ export default function PrivateClient() {
         </div>
 
         {/* Abstract Background Elements */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-blue-600/10 rounded-full blur-[120px] -z-0" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] bg-blue-600/10 rounded-full blur-[120px] z-0" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-blue-500/10 rounded-full blur-[80px]" />
       </section>
 
@@ -58,7 +58,7 @@ export default function PrivateClient() {
               </div>
             </div>
             <div className="relative">
-              <div className="bg-gray-100 rounded-[48px] aspect-[4/5] overflow-hidden">
+              <div className="bg-gray-100 rounded-[48px] aspect-4/5 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=800"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
@@ -133,7 +133,7 @@ export default function PrivateClient() {
 
       {/* CTA Section */}
       <section className="py-32 px-4 sm:px-10">
-        <div className="max-w-5xl mx-auto bg-gradient-to-br from-blue-600 to-blue-800 rounded-[60px] p-12 md:p-24 text-center">
+        <div className="max-w-5xl mx-auto bg-linear-to-br from-blue-600 to-blue-800 rounded-[60px] p-12 md:p-24 text-center">
           <h2 className="text-4xl md:text-6xl font-medium mb-10">Elevate your portfolio.</h2>
           <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
             Application for Private Client is by invitation or through a formal application process. Minimum asset requirements apply.

@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>About : Our Mission & Vision —  </title>
+        <title>About our Platform Our Mission & Vision</title>
       </Helmet>
 
       {/* Hero Section */}

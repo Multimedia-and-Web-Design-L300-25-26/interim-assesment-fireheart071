@@ -7,11 +7,11 @@ export default function Exchange() {
   return (
     <div className="bg-[#0a0b0d] text-white min-h-screen">
       <Helmet>
-        <title> Institutional Exchange —  </title>
+        <title>Institutional Exchange</title>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-32 px-4 sm:px-10 bg-gradient-to-br from-blue-900/30 to-black">
+      <section className="pt-24 pb-32 px-4 sm:px-10 bg-linear-to-br from-blue-900/30 to-black">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <div className="flex items-center gap-2 mb-8 bg-blue-500/10 px-4 py-1 rounded-full border border-blue-500/20">
              <BarChart3 className="text-blue-500" size={18} />
@@ -19,7 +19,7 @@ export default function Exchange() {
           </div>
           <h1 className="text-5xl sm:text-8xl font-medium tracking-tight leading-tight mb-10">
             The world's most <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">liquid exchange.</span>
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-600">liquid exchange.</span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed max-w-3xl mb-12">
             Access deep liquidity, advanced trading tools, and institutional-grade security on the platform trusted by the world's largest financial institutions.

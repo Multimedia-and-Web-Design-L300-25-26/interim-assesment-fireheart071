@@ -7,7 +7,7 @@ export default function Wallets() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Wallet Infrastructure for Developers —  </title>
+        <title>Wallet Infrastructure for Developers</title>
       </Helmet>
 
       {/* Hero Section */}

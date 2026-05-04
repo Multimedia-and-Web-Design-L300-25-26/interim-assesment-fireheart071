@@ -7,7 +7,7 @@ export default function BanksAndBrokerages() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Crypto Solutions for Banks & Brokerages —  </title>
+        <title>Crypto Solutions for Banks & Brokerages</title>
       </Helmet>
 
       {/* Hero Section */}
@@ -48,7 +48,7 @@ export default function BanksAndBrokerages() {
                 </div>
                 <div className="mt-10 h-10 w-full bg-blue-600 rounded-xl" />
              </div>
-             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl -z-0" />
+             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-50 rounded-full blur-3xl z-0" />
           </div>
         </div>
       </section>

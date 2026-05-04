@@ -84,7 +84,7 @@ export default function Learn() {
                 alt="Featured"
                 className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-10 flex flex-col justify-end text-white">
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent p-10 flex flex-col justify-end text-white">
                 <span className="text-sm font-bold uppercase tracking-widest mb-4 opacity-80">Featured Guide</span>
                 <h2 className="text-4xl font-bold mb-6 group-hover:text-blue-400 transition-colors">The Crypto Tax Guide 2024: Everything You Need to Know</h2>
                 <div className="flex items-center gap-4">
@@ -124,7 +124,7 @@ export default function Learn() {
                   <img
                     src={article.image}
                     alt={article.title}
-                    className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full aspect-4/3 object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <span className="text-blue-600 text-sm font-bold uppercase tracking-wider mb-2 block">{article.category}</span>
@@ -163,7 +163,7 @@ export default function Learn() {
                     <Play fill="white" className="text-white ml-1" size={32} />
                   </div>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-black/80 to-transparent">
                   <h4 className="text-xl font-bold mb-1">{video.title}</h4>
                   <p className="text-sm text-gray-400">{video.duration}</p>
                 </div>

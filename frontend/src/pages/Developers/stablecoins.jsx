@@ -7,11 +7,11 @@ export default function Stablecoins() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>USDC & Stablecoins for Developers —  </title>
+        <title>USDC & Stablecoins for Developers</title>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-32 px-4 sm:px-10 bg-gradient-to-b from-blue-50 to-white">
+      <section className="pt-24 pb-32 px-4 sm:px-10 bg-linear-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2 flex flex-col gap-8">
             <div className="flex items-center gap-2 text-blue-600 font-bold uppercase tracking-widest text-sm">

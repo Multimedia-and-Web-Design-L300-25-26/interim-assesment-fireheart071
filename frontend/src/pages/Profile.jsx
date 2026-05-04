@@ -103,8 +103,7 @@ export default function Profile() {
             </section>
             
             <div className="pt-4">
-              <button 
-                onClick={handleLogout}
+              <button our platform onClick={handleLogout}
                 className="flex items-center gap-2 text-red-600 font-bold hover:bg-red-50 px-4 py-2 rounded-xl transition-colors"
               >
                 <LogOut size={20} />

@@ -11,7 +11,7 @@ export default function Onchain() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-32 px-4 sm:px-10 bg-gradient-to-b from-blue-900/20 to-black">
+      <section className="pt-24 pb-32 px-4 sm:px-10 bg-linear-to-b from-blue-900/20 to-black">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <div className="flex items-center gap-2 mb-8 bg-blue-500/10 px-4 py-1 rounded-full border border-blue-500/20">
             <Compass className="text-blue-500" size={18} />
@@ -19,7 +19,7 @@ export default function Onchain() {
           </div>
           <h1 className="text-5xl sm:text-8xl font-medium tracking-tight leading-tight mb-10">
             The future is <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">on-chain.</span>
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-600">on-chain.</span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed max-w-3xl mb-12">
             Explore decentralized apps, collect NFTs, and earn yield on your assets. All from one secure place.

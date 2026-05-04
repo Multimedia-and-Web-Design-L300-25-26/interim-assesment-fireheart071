@@ -7,7 +7,7 @@ export default function Careers() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Careers at : Build the Future of Finance —  </title>
+        <title>Careers at our platform: Build the Future of Finance</title>
       </Helmet>
 
       {/* Hero Section */}

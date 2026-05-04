@@ -7,7 +7,7 @@ export default function Security() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Security at : Keeping Your Assets Safe —  </title>
+        <title>Security at our platform: Keeping Your Assets Safe</title>
       </Helmet>
 
       {/* Hero Section */}

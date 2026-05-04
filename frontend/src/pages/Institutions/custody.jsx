@@ -7,7 +7,7 @@ export default function Custody() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title> Custody: Secure Institutional Storage —  </title>
+        <title>Custody: Secure Institutional Storage</title>
       </Helmet>
 
       {/* Hero Section */}

@@ -7,7 +7,7 @@ export default function Commerce() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title> Commerce: Accept Crypto Payments —  </title>
+        <title>Commerce: Accept Crypto Payments</title>
       </Helmet>
 
       {/* Hero Section */}
@@ -55,7 +55,7 @@ export default function Commerce() {
                    ))}
                 </div>
              </div>
-             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-100 rounded-full blur-3xl -z-0" />
+             <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-blue-100 rounded-full blur-3xl z-0" />
           </div>
         </div>
       </section>

@@ -7,7 +7,7 @@ export default function InternationalExchange() {
   return (
     <div className="bg-[#0a0b0d] text-white min-h-screen">
       <Helmet>
-        <title> International Exchange —  </title>
+        <title>International Exchange</title>
       </Helmet>
 
       {/* Hero Section */}
@@ -52,7 +52,7 @@ export default function InternationalExchange() {
                    </div>
                 </div>
              </div>
-             <div className="absolute -top-10 -right-10 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl -z-0" />
+             <div className="absolute -top-10 -right-10 w-64 h-64 bg-blue-600/20 rounded-full blur-3xl z-0" />
           </div>
         </div>
       </section>
@@ -115,7 +115,7 @@ export default function InternationalExchange() {
 
       {/* CTA Section */}
       <section className="py-32 px-4 sm:px-10">
-         <div className="max-w-5xl mx-auto bg-gradient-to-r from-blue-600 to-blue-800 rounded-[60px] p-12 md:p-24 text-center">
+         <div className="max-w-5xl mx-auto bg-linear-to-r from-blue-600 to-blue-800 rounded-[60px] p-12 md:p-24 text-center">
             <h2 className="text-4xl md:text-6xl font-medium mb-10 leading-tight">Start trading international markets.</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                <Button text="Apply for access" className="bg-white text-blue-600 px-12 py-5 font-bold rounded-2xl shadow-2xl" />

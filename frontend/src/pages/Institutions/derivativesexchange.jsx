@@ -7,7 +7,7 @@ export default function DerivativesExchange() {
   return (
     <div className="bg-[#0a0b0d] text-white min-h-screen">
       <Helmet>
-        <title>Institutional Derivatives Exchange —  </title>
+        <title>Institutional Derivatives Exchange</title>
       </Helmet>
 
       {/* Hero Section */}
@@ -20,7 +20,7 @@ export default function DerivativesExchange() {
             </div>
             <h1 className="text-5xl sm:text-8xl font-medium tracking-tight leading-tight">
               Next-generation <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">derivatives.</span>
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-600">derivatives.</span>
             </h1>
             <p className="text-xl text-gray-400 leading-relaxed max-w-lg">
               The CFTC-regulated derivatives exchange built for institutional traders who require the highest standards of safety and compliance.

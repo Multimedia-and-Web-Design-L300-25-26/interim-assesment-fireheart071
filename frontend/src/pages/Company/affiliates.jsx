@@ -7,11 +7,11 @@ export default function Affiliates() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title> Affiliate Program —  </title>
+        <title>Affiliate Program</title>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-32 px-4 sm:px-10 bg-gradient-to-b from-blue-50 to-white text-center">
+      <section className="pt-24 pb-32 px-4 sm:px-10 bg-linear-to-b from-blue-50 to-white text-center">
         <div className="max-w-4xl mx-auto flex flex-col gap-8">
           <div className="flex items-center justify-center gap-2 text-blue-600 font-bold uppercase tracking-widest text-sm">
              <Users size={20} />
@@ -22,7 +22,7 @@ export default function Affiliates() {
             <span className="text-blue-600">growing the community.</span>
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            Join the  Affiliate Program and earn a commission for every new user you refer to the world's most trusted exchange.
+            Join the Affiliate Program and earn a commission for every new user you refer to the world's most trusted exchange.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button blue text="Become an affiliate" className="px-12 py-5 font-bold rounded-2xl text-lg" />

@@ -7,7 +7,7 @@ export default function Staking() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Institutional Staking Solutions —  </title>
+        <title>Institutional Staking Solutions</title>
       </Helmet>
 
       {/* Hero Section */}

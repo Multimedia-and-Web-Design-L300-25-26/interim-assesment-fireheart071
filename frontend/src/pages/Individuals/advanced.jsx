@@ -11,7 +11,7 @@ export default function Advanced() {
       </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-32 px-4 sm:px-10 bg-gradient-to-br from-blue-900/20 to-black">
+      <section className="pt-24 pb-32 px-4 sm:px-10 bg-linear-to-br from-blue-900/20 to-black">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <div className="flex items-center gap-2 mb-8 bg-blue-500/10 px-4 py-1 rounded-full border border-blue-500/20">
             <BarChart2 className="text-blue-500" size={18} />
@@ -19,7 +19,7 @@ export default function Advanced() {
           </div>
           <h1 className="text-5xl sm:text-8xl font-medium tracking-tight leading-tight mb-10">
             Engineered for <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">professional traders.</span>
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-blue-600">professional traders.</span>
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed max-w-3xl mb-12">
             Access deep liquidity, lower fees, and advanced order types on a powerful, secure trading platform.
@@ -54,7 +54,7 @@ export default function Advanced() {
               </div>
               <Settings className="text-gray-500" />
             </div>
-            <div className="h-[400px] w-full bg-gradient-to-t from-blue-500/5 to-transparent rounded-3xl flex items-end p-8">
+            <div className="h-[400px] w-full bg-linear-to-t from-blue-500/5 to-transparent rounded-3xl flex items-end p-8">
               {/* Simulated Chart */}
               <div className="flex items-end gap-1 w-full h-full opacity-40">
                 {[...Array(40)].map((_, i) => (
@@ -62,7 +62,7 @@ export default function Advanced() {
                 ))}
               </div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1a1b1f] via-transparent to-transparent opacity-60" />
+            <div className="absolute inset-0 bg-linear-to-t from-[#1a1b1f] via-transparent to-transparent opacity-60" />
           </div>
         </div>
       </section>

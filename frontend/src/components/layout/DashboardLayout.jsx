@@ -63,7 +63,7 @@ export function DashboardLayout() {
           </Link>
         </div>
 
-        <nav className="flex-grow px-3 space-y-1">
+        <nav className="grow px-3 space-y-1">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -85,7 +85,7 @@ export function DashboardLayout() {
              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
                {user?.name?.charAt(0).toUpperCase()}
              </div>
-             <div className="flex-grow min-w-0">
+             <div className="grow min-w-0">
                <p className="text-sm font-semibold text-slate-900 truncate">{user?.name}</p>
              </div>
              <ChevronDown size={16} className="text-slate-400" />
@@ -118,7 +118,7 @@ export function DashboardLayout() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 bg-black/50 z-[100] md:hidden">
+        <div className="fixed inset-0 bg-black/50 z-100 md:hidden">
           <div className="w-4/5 h-full bg-white p-6 slide-in-left">
             <div className="flex justify-between items-center mb-8">
               <img src="/logo.png" className="h-8 w-8" alt="" />
@@ -154,7 +154,7 @@ export function DashboardLayout() {
       )}
 
       {/* Main Content Area */}
-      <main className="flex-grow flex flex-col min-w-0">
+      <main className="grow flex flex-col min-w-0">
         {/* Top bar for search and notifications (Desktop) */}
         <header className="hidden md:flex items-center justify-between px-8 py-4 border-b border-slate-100">
           <div className="w-1/2 max-w-md">

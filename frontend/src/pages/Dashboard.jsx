@@ -61,11 +61,11 @@ export function Dashboard() {
             </div>
             
             {/* Dynamic Chart Mockup */}
-            <div className="flex-grow flex items-end gap-2 px-2 h-56">
+            <div className="grow flex items-end gap-2 px-2 h-56">
                {[40, 45, 38, 52, 60, 58, 65, 75, 70, 85, 80, 95, 100, 90, 110, 105, 120].map((h, i) => (
                  <div 
                    key={i} 
-                   className="flex-grow bg-blue-600/5 rounded-t-xl hover:bg-blue-600/20 transition-all cursor-pointer relative group/bar" 
+                   className="grow bg-blue-600/5 rounded-t-xl hover:bg-blue-600/20 transition-all cursor-pointer relative group/bar" 
                    style={{ height: `${h}%` }}
                  >
                     <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 bg-slate-900 text-white text-[10px] font-black py-1.5 px-3 rounded-lg opacity-0 group-hover/bar:opacity-100 pointer-events-none whitespace-nowrap z-20 shadow-xl transition-all translate-y-2 group-hover/bar:translate-y-0">
@@ -158,7 +158,7 @@ export function Dashboard() {
         {/* Sidebar Area */}
         <div className="space-y-10">
            {/* Promo Card */}
-           <div className="bg-gradient-to-br from-blue-600 to-blue-800 p-10 rounded-[48px] text-white shadow-2xl shadow-blue-200 relative overflow-hidden group">
+           <div className="bg-linear-to-br from-blue-600 to-blue-800 p-10 rounded-[48px] text-white shadow-2xl shadow-blue-200 relative overflow-hidden group">
               <div className="relative z-10">
                  <h3 className="text-2xl font-bold mb-3">Claim your <br /> free rewards</h3>
                  <p className="text-blue-100 text-sm mb-8 leading-relaxed">Learn about new assets and get $10 worth of rewards to get started.</p>
@@ -185,7 +185,7 @@ export function Dashboard() {
                     <div className={`w-12 h-12 ${tx.bg} rounded-2xl flex items-center justify-center ${tx.color} group-hover:scale-110 transition-transform`}>
                        {tx.type === 'Bought' ? <Plus size={20} /> : tx.type === 'Sold' ? <TrendingDown size={20} /> : <TrendingUp size={20} />}
                     </div>
-                    <div className="flex-grow">
+                    <div className="grow">
                       <p className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">{tx.type} {tx.asset}</p>
                       <p className="text-[10px] text-slate-400 font-black uppercase tracking-tighter">{tx.date} · {tx.amount}</p>
                     </div>

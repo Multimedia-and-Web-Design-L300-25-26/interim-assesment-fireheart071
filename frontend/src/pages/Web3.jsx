@@ -9,7 +9,7 @@ export default function Web3() {
         <title>Web3</title>
       </Helmet>
 
-      <div className="bg-gradient-to-r from-blue-700 to-indigo-800 rounded-[40px] p-8 md:p-16 text-white mb-12 relative overflow-hidden">
+      <div className="bg-linear-to-r from-blue-700 to-indigo-800 rounded-[40px] p-8 md:p-16 text-white mb-12 relative overflow-hidden">
         <div className="relative z-10 max-w-2xl">
            <div className="flex items-center gap-2 mb-6">
               <Sparkles size={20} className="text-blue-300" />

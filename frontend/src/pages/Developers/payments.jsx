@@ -7,7 +7,7 @@ export default function DevPayments() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title> Payments API: Accept Crypto Globally —  </title>
+        <title>Payments API: Accept Crypto Globally</title>
       </Helmet>
 
       {/* Hero Section */}

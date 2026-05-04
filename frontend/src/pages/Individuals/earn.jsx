@@ -29,7 +29,7 @@ export default function Earn() {
             </div>
           </div>
           <div className="w-full md:w-1/2 relative">
-            <div className="bg-gradient-to-br from-blue-600 to-blue-400 rounded-[48px] p-12 text-white shadow-2xl relative overflow-hidden group">
+            <div className="bg-linear-to-br from-blue-600 to-blue-400 rounded-[48px] p-12 text-white shadow-2xl relative overflow-hidden group">
               <div className="relative z-10">
                 <p className="text-blue-100 font-bold mb-4">Total Earned</p>
                 <h2 className="text-5xl font-bold mb-8">$1,240.50</h2>
@@ -104,7 +104,7 @@ export default function Earn() {
                 </div>
                 <h3 className="text-2xl font-bold mb-4">Referrals</h3>
                 <p className="text-gray-500 leading-relaxed mb-8">
-                  Invite your friends to . You'll both get $10 in Bitcoin when they buy or sell $100 of crypto.
+                  Invite your friends to our platform. You'll both get $10 in Bitcoin when they buy or sell $100 of crypto.
                 </p>
               </div>
               <div className="flex items-center text-blue-600 font-bold group-hover:gap-2 transition-all cursor-pointer">
@@ -184,7 +184,7 @@ export default function Earn() {
           <div className="w-full md:w-1/2">
             <div className="bg-gray-100 rounded-[48px] p-12 aspect-square flex items-center justify-center relative overflow-hidden">
               <Shield size={120} className="text-blue-600 relative z-10" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-50 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-tr from-blue-50 to-transparent" />
             </div>
           </div>
         </div>

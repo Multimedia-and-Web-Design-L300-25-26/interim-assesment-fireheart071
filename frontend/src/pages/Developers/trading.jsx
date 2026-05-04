@@ -7,7 +7,7 @@ export default function DevTrading() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Exchange & Trading APIs —  </title>
+        <title>Exchange & Trading APIs</title>
       </Helmet>
 
       {/* Hero Section */}

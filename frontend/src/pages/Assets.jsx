@@ -45,7 +45,7 @@ export default function Assets() {
 
       {/* Portfolio Summary Card */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-         <div className="md:col-span-2 bg-gradient-to-br from-slate-900 to-slate-800 p-8 rounded-[40px] text-white shadow-2xl relative overflow-hidden">
+         <div className="md:col-span-2 bg-linear-to-br from-slate-900 to-slate-800 p-8 rounded-[40px] text-white shadow-2xl relative overflow-hidden">
             <div className="relative z-10">
                <p className="text-slate-400 font-bold text-xs uppercase tracking-widest mb-2">Total Balance</p>
                <h2 className="text-5xl font-bold mb-8">$42,850.12</h2>

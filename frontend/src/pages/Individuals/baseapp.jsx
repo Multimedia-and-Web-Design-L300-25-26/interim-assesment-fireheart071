@@ -7,7 +7,7 @@ export default function BaseApp() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Base: An Ethereum L2 built by </title>
+        <title>Base: An Ethereum L2 Platform</title>
       </Helmet>
 
       {/* Hero Section */}

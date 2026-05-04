@@ -7,7 +7,7 @@ export default function Business() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title> for Business: Institutional Crypto Solutions —  </title>
+        <title>for Business: Institutional Crypto Solutions</title>
       </Helmet>
 
       {/* Hero Section */}
@@ -27,7 +27,7 @@ export default function Business() {
             </div>
           </div>
           <div className="w-full md:w-1/2">
-             <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-[48px] p-12 border border-white/10 backdrop-blur-3xl shadow-2xl">
+             <div className="bg-linear-to-br from-blue-600/20 to-purple-600/20 rounded-[48px] p-12 border border-white/10 backdrop-blur-3xl shadow-2xl">
                 <div className="grid grid-cols-2 gap-8">
                    {[
                      { label: "Assets under custody", value: "$100B+" },

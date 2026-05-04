@@ -7,7 +7,7 @@ export default function Support() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title> Help Center —  </title>
+        <title>Help Center</title>
       </Helmet>
 
       {/* Hero / Search Section */}

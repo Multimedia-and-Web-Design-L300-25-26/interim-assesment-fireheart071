@@ -78,9 +78,9 @@ export function SignIn() {
             </button>
 
             <div className="flex items-center gap-3 text-sm text-slate-500">
-              <div className="flex-grow h-px bg-slate-800" />
+              <div className="grow h-px bg-slate-800" />
               <div>OR</div>
-              <div className="flex-grow h-px bg-slate-800" />
+              <div className="grow h-px bg-slate-800" />
             </div>
 
             <button type="button" className="w-full rounded-full py-3 bg-[#282B31] flex items-center gap-3 justify-center">

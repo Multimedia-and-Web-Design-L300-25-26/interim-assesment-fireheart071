@@ -7,11 +7,11 @@ export default function One() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title> One: Zero Trading Fees & Rewards</title>
+        <title>Premium: Zero Trading Fees & Rewards</title>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-32 px-4 sm:px-10 bg-gradient-to-b from-[#f0f3ff] to-white">
+      <section className="pt-24 pb-32 px-4 sm:px-10 bg-linear-to-b from-[#f0f3ff] to-white">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <div className="flex items-center gap-2 border border-blue-200 rounded-full px-4 py-1.5 mb-8 bg-blue-50/50">
             <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center">

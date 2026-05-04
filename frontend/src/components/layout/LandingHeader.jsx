@@ -30,7 +30,7 @@ export const LandingHeader = ({ blue }) => {
         { title: "Business", description: "Crypto trading and payments for startups and SMBs", icon: Building2, link: "/businesses/business" },
         { title: "Payments", description: "The stablecoin payments stack for commerce platforms", icon: Zap, link: "/businesses/payments" },
         { title: "Commerce", description: "Start accepting crypto payments", icon: ShoppingBag, link: "/businesses/commerce" },
-        { title: "Asset Listings", description: "List your asset on ", icon: PlusCircle, link: "/businesses/assetlistings" },
+        { title: "Asset Listings", description: "List your asset", icon: PlusCircle, link: "/businesses/assetlistings" },
     ]
     const Institutions = [
         { title: "Trading and Financing", description: "Professional prime brokerage services", icon: Banknote, link: "/institutions/tradingandfinancing" },
@@ -56,8 +56,8 @@ export const LandingHeader = ({ blue }) => {
         { title: "Careers", description: "Work with us", icon: UserPlus, link: "/company/careers" },
         { title: "Affiliates", description: "Help introduce the world to crypto", icon: Users, link: "/company/affiliates" },
         { title: "Support", description: "Find answers to your questions", icon: HelpCircle, link: "/company/support" },
-        { title: "Blog", description: "Read the latest from ", icon: Newspaper, link: "/company/blog" },
-        { title: "Security", description: "The most trusted & secure", icon: Shield, link: "/company/security" },
+        { title: "Blog", description: "Read the latest industry news", icon: Newspaper, link: "/company/blog" },
+        { title: "Security", description: "The most trusted & secure platform", icon: Shield, link: "/company/security" },
     ]
     const SideInfo = [
         { title: "Individuals", description: "Discover our suite of products for individuals", text: "Learn more", icon: Users, link: "" },

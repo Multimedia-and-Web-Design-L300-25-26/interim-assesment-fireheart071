@@ -7,7 +7,7 @@ import { getAllCryptos, getTopGainers, getNewListings } from "../utils/api";
 
 const Sidebar = ({ gainers, newListings, loading }) => (
   <div className="space-y-6">
-    <div className="p-4 bg-gradient-to-br from-blue-600 to-blue-500 text-white rounded-lg shadow-md border border-transparent">
+    <div className="p-4 bg-linear-to-br from-blue-600 to-blue-500 text-white rounded-lg shadow-md border border-transparent">
       <div className="flex items-start justify-between gap-3">
         <div>
           <h4 className="font-semibold">Get started</h4>
@@ -40,7 +40,7 @@ const Sidebar = ({ gainers, newListings, loading }) => (
         ) : (
           <div className="flex gap-3 overflow-x-auto no-scrollbar items-stretch py-1">
             {gainers.map((crypto) => (
-              <div key={crypto._id} className="min-w-[160px] bg-slate-100 rounded-xl p-3 flex-shrink-0">
+              <div key={crypto._id} className="min-w-[160px] bg-slate-100 rounded-xl p-3 shrink-0">
                 <div className="flex items-center gap-3">
                   <img src={crypto.image} alt={crypto.name} className="w-8 h-8 rounded-full" />
                   <div>
@@ -61,7 +61,7 @@ const Sidebar = ({ gainers, newListings, loading }) => (
     <div className="p-4 bg-white rounded-lg border border-slate-200">
       <div className="flex items-center justify-between">
         <div>
-          <h5 className="text-sm font-semibold">New on </h5>
+          <h5 className="text-sm font-semibold">New assets</h5>
         </div>
         <div className="flex items-center gap-2 text-slate-400">
           <button className="p-1 rounded-full hover:bg-slate-100"><ChevronLeft size={16} /></button>
@@ -75,7 +75,7 @@ const Sidebar = ({ gainers, newListings, loading }) => (
         ) : (
           <div className="flex gap-3 overflow-x-auto no-scrollbar py-1">
             {newListings.map((crypto) => (
-              <div key={crypto._id} className="min-w-[140px] bg-slate-100 rounded-xl p-3 flex-shrink-0">
+              <div key={crypto._id} className="min-w-[140px] bg-slate-100 rounded-xl p-3 shrink-0">
                 <div className="flex items-center gap-3">
                   <img src={crypto.image} alt={crypto.name} className="w-8 h-8 rounded-full" />
                   <div>

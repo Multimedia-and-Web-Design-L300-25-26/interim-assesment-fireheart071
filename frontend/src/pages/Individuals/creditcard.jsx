@@ -7,7 +7,7 @@ export default function CreditCard() {
    return (
       <div className="bg-white min-h-screen">
          <Helmet>
-            <title> Card: Spend Crypto, Earn Rewards</title>
+            <title>Card: Spend Crypto, Earn Rewards</title>
          </Helmet>
 
          {/* Hero Section */}
@@ -46,7 +46,7 @@ export default function CreditCard() {
                         </div>
                      </div>
                   </div>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl -z-0" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl z-0" />
                </div>
             </div>
          </section>
@@ -79,14 +79,14 @@ export default function CreditCard() {
          <section className="py-32 px-4 sm:px-10 bg-gray-50">
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                <div>
-                  <img src="/zero_fees_us.png" alt="App Preview" className="w-full max-w-[500px] mx-auto drop-shadow-2xl" />
+                  <img src="/feature_preview.png" alt="App Preview" className="w-full max-w-[500px] mx-auto drop-shadow-2xl" />
                </div>
                <div className="space-y-12">
                   <h2 className="text-4xl font-medium">Full control in your pocket.</h2>
                   {[
                      { icon: <ShoppingBag />, title: "Spend instantly", desc: "Use your virtual card as soon as you're approved. No need to wait for the physical card." },
                      { icon: <ShieldCheck />, title: "World-class security", desc: "Freeze your card, change your PIN, and manage spending limits directly in the app." },
-                     { icon: <Percent />, title: "No hidden fees", desc: "No annual fees, no sign-up fees, and no transaction fees for spending USD." }
+                     { icon: <Percent />, title: "No hidden fees", desc: "No annual fees, no sign-up fees, and no transaction fees for spending USD on our platform." }
                   ].map((feature, i) => (
                      <div key={i} className="flex gap-6">
                         <div className="bg-blue-600 text-white p-4 rounded-2xl h-fit">

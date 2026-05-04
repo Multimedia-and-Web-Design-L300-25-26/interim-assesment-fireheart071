@@ -7,11 +7,11 @@ export default function Startups() {
   return (
     <div className="bg-[#0a0b0d] text-white min-h-screen">
       <Helmet>
-        <title> for Startups: Build Your Crypto Vision —  </title>
+        <title>For Startups: Build Your Crypto Vision</title>
       </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-32 px-4 sm:px-10 bg-gradient-to-b from-blue-900/20 to-black">
+      <section className="pt-24 pb-32 px-4 sm:px-10 bg-linear-to-b from-blue-900/20 to-black">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
           <div className="flex items-center gap-2 mb-8 bg-blue-500/10 px-4 py-1 rounded-full border border-blue-500/20">
              <Rocket className="text-blue-500" size={18} />
@@ -19,7 +19,7 @@ export default function Startups() {
           </div>
           <h1 className="text-5xl sm:text-8xl font-medium tracking-tight leading-tight mb-10">
             Build the next <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 font-bold">big thing</span> in crypto.
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-600 font-bold">big thing</span> in crypto.
           </h1>
           <p className="text-xl text-gray-400 leading-relaxed max-w-2xl mb-12">
             Get the infrastructure, capital, and support you need to turn your vision into a global product. Built by developers, for developers.
@@ -76,8 +76,8 @@ export default function Startups() {
               <h2 className="text-4xl md:text-5xl font-medium leading-tight text-white">More than just code.</h2>
               <div className="space-y-8">
                  {[
-                   { title: " Ventures", desc: "Access to early-stage funding from one of the most active investors in crypto." },
-                   { title: "Cloud Credits", desc: "Up to $25,000 in credits for eligible startups to build on  Cloud." },
+                   { title: "Our Ventures", desc: "Access to early-stage funding from one of the most active investors in crypto." },
+                   { title: "Platform Credits", desc: "Up to $25,000 in credits for eligible startups to build on our platform." },
                    { title: "Go-to-market Support", desc: "Leverage our 100M+ user base to accelerate your growth." }
                  ].map((item, i) => (
                    <div key={i} className="flex gap-6">
@@ -92,15 +92,15 @@ export default function Startups() {
            </div>
            <div className="bg-white/5 p-12 rounded-[48px] border border-white/10 relative overflow-hidden">
               <pre className="text-blue-400 font-mono text-sm sm:text-base overflow-x-auto p-4">
-{`const  = require('-cloud');
+{`const platform = require('our-platform-sdk');
 
 async function launchStartup() {
   const idea = await buildVision();
-  const funding = await .ventures.apply();
+  const funding = await platform.ventures.apply();
   
   if (funding.approved) {
     console.log("Ready for takeoff 🚀");
-    return .cloud.deploy(idea);
+    return platform.deploy(idea);
   }
 }
 
@@ -113,7 +113,7 @@ launchStartup();`}
 
       {/* Final CTA */}
       <section className="py-32 px-4 sm:px-10">
-         <div className="max-w-5xl mx-auto bg-gradient-to-r from-blue-600 to-purple-700 rounded-[60px] p-12 md:p-24 text-center">
+         <div className="max-w-5xl mx-auto bg-linear-to-r from-blue-600 to-purple-700 rounded-[60px] p-12 md:p-24 text-center">
             <h2 className="text-4xl md:text-6xl font-medium mb-10 leading-tight">Your journey starts here.</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
                <Button text="Start building" className="bg-white text-blue-600 px-12 py-5 font-bold rounded-2xl shadow-2xl" />

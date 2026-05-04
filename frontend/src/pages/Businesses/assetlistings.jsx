@@ -7,7 +7,7 @@ export default function AssetListings() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>List Your Asset on  —  </title>
+        <title>List Your Asset on</title>
       </Helmet>
 
       {/* Hero Section */}

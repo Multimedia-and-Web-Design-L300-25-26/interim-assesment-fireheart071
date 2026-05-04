@@ -55,7 +55,7 @@ export const Landing = () => {
                     <div className="flex gap-6 mb-8 text-[15px] font-semibold text-gray-400 pb-2">
                         <button className="bg-[#2b2b2b] text-white px-4 py-1.5 rounded-full transition-colors">Tradable</button>
                         <button className="px-2 py-1.5 hover:text-white transition-colors">Top gainers</button>
-                        <button className="px-2 py-1.5 hover:text-white transition-colors">New on </button>
+                        <button className="px-2 py-1.5 hover:text-white transition-colors">New assets</button>
                     </div>
 
                     {/* List */}
@@ -184,7 +184,7 @@ export const Landing = () => {
                 <div className="flex flex-col md:flex-row w-full gap-12 justify-center items-center">
                     <div className="w-full md:w-1/2">
                         <div className="bg-[#f0f2f5] rounded-[48px] p-4 flex justify-center items-center">
-                            <img src="/CB_LOLP__1_.avif" alt="Base App Mobile" className="w-full max-w-[400px] min-h-[350px] object-contain" />
+                            <img src="/marketing_banner_1.avif" alt="App Mobile Preview" className="w-full max-w-[400px] min-h-[350px] object-contain" />
                         </div>
                     </div>
                     <div className="w-full md:w-1/2 flex flex-col gap-6">

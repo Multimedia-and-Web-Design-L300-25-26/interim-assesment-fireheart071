@@ -31,7 +31,7 @@ export default function Blog() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title> Blog —  </title>
+        <title>Blog</title>
       </Helmet>
 
       {/* Header */}
@@ -67,7 +67,7 @@ export default function Blog() {
                    alt="Featured Post" 
                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                  />
-                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                  <div className="absolute bottom-12 left-12 right-12 text-white">
                     <span className="bg-blue-600 px-4 py-1 rounded-full text-xs font-bold uppercase mb-6 inline-block">Featured</span>
                     <h2 className="text-4xl md:text-6xl font-medium mb-6 leading-tight">The Future of the Crypto <br /> Economy is On-chain</h2>

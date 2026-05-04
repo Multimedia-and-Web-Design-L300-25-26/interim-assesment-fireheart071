@@ -7,7 +7,7 @@ export default function VerifiedPools() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title> Verified Pools: Compliant DeFi —  </title>
+        <title>Verified Pools: Compliant DeFi</title>
       </Helmet>
 
       {/* Hero Section */}

@@ -7,7 +7,7 @@ export default function DebitCard() {
   return (
     <div className="bg-[#f8f9fb] min-h-screen">
       <Helmet>
-        <title> Debit Card: Direct Crypto Spending</title>
+        <title>Debit Card: Direct Crypto Spending</title>
       </Helmet>
 
       {/* Hero Section */}
@@ -32,7 +32,7 @@ export default function DebitCard() {
           <div className="w-full lg:w-1/2">
             <div className="bg-white rounded-[48px] p-8 sm:p-16 shadow-2xl relative overflow-hidden">
               <img
-                src="/CB_LOLP__1_.avif"
+                src="/marketing_banner_1.avif"
                 alt="Debit Card App"
                 className="w-full h-auto object-contain relative z-10"
               />
