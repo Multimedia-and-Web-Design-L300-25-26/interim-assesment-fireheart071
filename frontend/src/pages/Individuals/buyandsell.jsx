@@ -81,7 +81,7 @@ export default function BuyAndSell() {
   return (
     <div className="bg-[#f8f9fb] min-h-screen">
       <Helmet>
-        <title>Buy, Sell & Manage Crypto — Coinbase Clone</title>
+        <title>Buy, Sell & Manage Crypto</title>
       </Helmet>
 
       {/* Hero Section */}
@@ -166,7 +166,7 @@ export default function BuyAndSell() {
       <section className="py-32 px-4 sm:px-10 bg-blue-600 text-white rounded-[60px] mx-4 sm:mx-10 mb-20">
         <div className="max-w-4xl mx-auto text-center flex flex-col gap-8">
           <h2 className="text-4xl sm:text-6xl font-medium">Ready to start?</h2>
-          <p className="text-xl text-blue-100">Join over 100 million people who trust Coinbase for their crypto needs.</p>
+          <p className="text-xl text-blue-100">Join over 100 million people who trust  for their crypto needs.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
             <Button text="Get Started" className="px-10 py-5 font-bold bg-white text-blue-600 hover:bg-gray-100" />
           </div>
@@ -175,4 +175,10 @@ export default function BuyAndSell() {
     </div>
   );
 }
+
+
+
+
+
+
 

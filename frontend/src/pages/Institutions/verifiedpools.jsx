@@ -7,7 +7,7 @@ export default function VerifiedPools() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Coinbase Verified Pools: Compliant DeFi — Coinbase Clone</title>
+        <title> Verified Pools: Compliant DeFi —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -104,4 +104,9 @@ export default function VerifiedPools() {
     </div>
   );
 }
+
+
+
+
+
 

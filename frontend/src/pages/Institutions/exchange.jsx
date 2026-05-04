@@ -7,7 +7,7 @@ export default function Exchange() {
   return (
     <div className="bg-[#0a0b0d] text-white min-h-screen">
       <Helmet>
-        <title>Coinbase Institutional Exchange — Coinbase Clone</title>
+        <title> Institutional Exchange —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -63,7 +63,7 @@ export default function Exchange() {
               {
                 icon: <Shield className="text-blue-600" />,
                 title: "Secure Custody",
-                desc: "Integrated with Coinbase Custody for seamless and secure asset management."
+                desc: "Integrated with  Custody for seamless and secure asset management."
               },
               {
                 icon: <Globe className="text-blue-600" />,
@@ -129,4 +129,9 @@ export default function Exchange() {
     </div>
   );
 }
+
+
+
+
+
 

@@ -7,7 +7,7 @@ export default function BanksAndBrokerages() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Crypto Solutions for Banks & Brokerages — Coinbase Clone</title>
+        <title>Crypto Solutions for Banks & Brokerages —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -115,7 +115,7 @@ export default function BanksAndBrokerages() {
             </div>
             <div className="bg-white/5 p-12 rounded-[48px] border border-white/10 text-center">
                <p className="text-gray-400 italic text-xl mb-8">
-                  "Coinbase's infrastructure allowed us to launch crypto trading to our millions of customers in record time, with full confidence in security and compliance."
+                  "'s infrastructure allowed us to launch crypto trading to our millions of customers in record time, with full confidence in security and compliance."
                </p>
                <div>
                   <p className="font-bold">Head of Digital Assets</p>
@@ -137,4 +137,9 @@ export default function BanksAndBrokerages() {
     </div>
   );
 }
+
+
+
+
+
 

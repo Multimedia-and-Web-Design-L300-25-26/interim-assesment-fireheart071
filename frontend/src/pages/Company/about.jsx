@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>About Coinbase: Our Mission & Vision — Coinbase Clone</title>
+        <title>About : Our Mission & Vision —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -52,10 +52,10 @@ export default function About() {
       <section className="py-32 px-4 sm:px-10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
            <div className="w-full md:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-medium mb-8">The Coinbase Story</h2>
+              <h2 className="text-4xl md:text-5xl font-medium mb-8">The  Story</h2>
               <div className="space-y-6 text-lg text-gray-500 leading-relaxed">
                  <p>
-                    Founded in 2012, Coinbase was built on the radical idea that anyone, anywhere, should be able to easily and securely send and receive Bitcoin.
+                    Founded in 2012,  was built on the radical idea that anyone, anywhere, should be able to easily and securely send and receive Bitcoin.
                  </p>
                  <p>
                     Today, we offer a trusted and easy-to-use platform for accessing the broader crypto economy. We are a publicly traded company (NASDAQ: COIN) and serve over 100 million users worldwide.
@@ -96,4 +96,9 @@ export default function About() {
     </div>
   );
 }
+
+
+
+
+
 

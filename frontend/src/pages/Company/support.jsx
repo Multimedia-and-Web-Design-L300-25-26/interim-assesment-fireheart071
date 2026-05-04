@@ -7,7 +7,7 @@ export default function Support() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Coinbase Help Center — Coinbase Clone</title>
+        <title> Help Center —  </title>
       </Helmet>
 
       {/* Hero / Search Section */}
@@ -37,7 +37,7 @@ export default function Support() {
               { icon: <ShieldCheck className="text-blue-600" />, title: "Account Security", desc: "Secure your account and 2FA" },
               { icon: <FileText className="text-blue-600" />, title: "Verifying Identity", desc: "KYC and ID verification help" },
               { icon: <Zap className="text-blue-600" />, title: "Trading & Funding", desc: "Buy, sell, and deposit crypto" },
-              { icon: <Wallet className="text-blue-600" />, title: "Coinbase Wallet", desc: "Help with self-custody" }
+              { icon: <Wallet className="text-blue-600" />, title: " Wallet", desc: "Help with self-custody" }
             ].map((link, i) => (
               <div key={i} className="p-8 rounded-[32px] border border-gray-100 hover:bg-gray-50 hover:border-blue-100 transition-all cursor-pointer group">
                  <div className="mb-6 group-hover:scale-110 transition-transform">{link.icon}</div>
@@ -59,7 +59,7 @@ export default function Support() {
                 "Why is my account restricted?",
                 "How to link a bank account",
                 "Understanding network fees",
-                "How to contact Coinbase support",
+                "How to contact  support",
                 "Reporting a suspicious email"
               ].map((topic, i) => (
                 <div key={i} className="flex items-center justify-between p-6 bg-white rounded-2xl border border-gray-100 hover:border-blue-500/20 cursor-pointer group transition-all">
@@ -116,4 +116,9 @@ function Wallet(props) {
     </svg>
   );
 }
+
+
+
+
+
 

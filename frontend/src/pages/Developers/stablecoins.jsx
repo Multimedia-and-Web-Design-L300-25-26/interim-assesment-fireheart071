@@ -7,7 +7,7 @@ export default function Stablecoins() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>USDC & Stablecoins for Developers — Coinbase Clone</title>
+        <title>USDC & Stablecoins for Developers —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -115,4 +115,9 @@ export default function Stablecoins() {
     </div>
   );
 }
+
+
+
+
+
 

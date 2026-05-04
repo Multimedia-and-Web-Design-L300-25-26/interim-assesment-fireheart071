@@ -7,7 +7,7 @@ export default function Careers() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Careers at Coinbase: Build the Future of Finance — Coinbase Clone</title>
+        <title>Careers at : Build the Future of Finance —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -34,7 +34,7 @@ export default function Careers() {
         </div>
       </section>
 
-      {/* Why Coinbase */}
+      {/* Why  */}
       <section className="py-32 px-4 sm:px-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-24">
@@ -87,4 +87,9 @@ export default function Careers() {
     </div>
   );
 }
+
+
+
+
+
 

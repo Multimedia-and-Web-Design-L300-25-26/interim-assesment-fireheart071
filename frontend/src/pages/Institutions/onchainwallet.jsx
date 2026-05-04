@@ -7,7 +7,7 @@ export default function OnchainWallet() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Institutional On-chain Wallet — Coinbase Clone</title>
+        <title>Institutional On-chain Wallet —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -103,4 +103,9 @@ export default function OnchainWallet() {
     </div>
   );
 }
+
+
+
+
+
 

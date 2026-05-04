@@ -20,7 +20,7 @@ export function SignIn() {
       const response = await loginUser({ email, password });
       if (response.data.success) {
         localStorage.setItem('token', response.data.token);
-        navigate("/");
+        navigate("/dashboard");
       }
     } catch (err) {
       setError(err.response?.data?.message || "Login failed. Please check your credentials.");
@@ -32,19 +32,19 @@ export function SignIn() {
   return (
     <div className=" bg-[#070809] text-white relative overscroll-x-none overflow-x-hidden">
       <Helmet>
-        <title>Sign In — Coinbase Clone</title>
+        <title>Sign In</title>
       </Helmet>
       <header className="fixed top-0 left-0 right-0 flex items-center justify-between px-6 py-4">
         <div className="flex items-center">
           <Link to="/">
-            <img src="/coinbase.png" className="h-10 w-10 filter-[brightness(0)_saturate(100%)_invert(100%)_sepia(10%)_saturate(657%)_hue-rotate(230deg)_brightness(111%)_contrast(100%)]" alt="" />
+            <img src="/logo.png" className="h-10 w-10 filter-[brightness(0)_saturate(100%)_invert(100%)_sepia(10%)_saturate(657%)_hue-rotate(230deg)_brightness(111%)_contrast(100%)]" alt="" />
           </Link>
         </div>
       </header>
 
       <main className="min-h-screen flex items-center justify-center px-4 pt-40">
         <div className="w-full sm:w-[30%] max-w-md">
-          <h1 className="text-2xl font-bold mb-3">Sign in to Coinbase</h1>
+          <h1 className="text-2xl font-bold mb-3">Sign in to </h1>
 
           {error && <div className="bg-red-500/20 text-red-500 p-3 rounded-md mb-4 text-sm">{error}</div>}
 
@@ -109,3 +109,8 @@ export function SignIn() {
     </div>
   );
 }
+
+
+
+
+

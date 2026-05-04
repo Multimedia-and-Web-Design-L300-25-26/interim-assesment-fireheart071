@@ -19,7 +19,7 @@ export const LandingHeader = ({ blue }) => {
         { title: "Advanced", description: "Professional-grade trading tools", icon: LineChart, link: "/individuals/advanced" },
         { title: "Base App", description: "Post, earn, trade, and chat, all in one place rewards", icon: Hexagon, link: "/individuals/baseapp" },
         { title: "Earn", description: "Stake your crypto and earn rewards", icon: Coins, link: "/individuals/earn" },
-        { title: "Coinbase One", description: "Get zero trading fees and more", icon: Star, link: "/individuals/coinbaseone" },
+        { title: " One", description: "Get zero trading fees and more", icon: Star, link: "/individuals/one" },
         { title: "Private Client", description: "For trusts, family offices, UHNWIs", icon: Briefcase, link: "/individuals/privateclient" },
         { title: "Credit Card", description: "Earn up to 4% bitcoin back", icon: CreditCard, link: "/individuals/creditcard" },
         { title: "Onchain", description: "Dive into the world of onchain apps", icon: Globe, link: "/individuals/onchain" },
@@ -30,7 +30,7 @@ export const LandingHeader = ({ blue }) => {
         { title: "Business", description: "Crypto trading and payments for startups and SMBs", icon: Building2, link: "/businesses/business" },
         { title: "Payments", description: "The stablecoin payments stack for commerce platforms", icon: Zap, link: "/businesses/payments" },
         { title: "Commerce", description: "Start accepting crypto payments", icon: ShoppingBag, link: "/businesses/commerce" },
-        { title: "Asset Listings", description: "List your asset on Coinbase", icon: PlusCircle, link: "/businesses/assetlistings" },
+        { title: "Asset Listings", description: "List your asset on ", icon: PlusCircle, link: "/businesses/assetlistings" },
     ]
     const Institutions = [
         { title: "Trading and Financing", description: "Professional prime brokerage services", icon: Banknote, link: "/institutions/tradingandfinancing" },
@@ -49,14 +49,14 @@ export const LandingHeader = ({ blue }) => {
         { title: "Payment Firms", description: "Near-instant, low-cost, global payment rails for modern providers", icon: Landmark, link: "/developers/paymentfirms" },
         { title: "Wallets", description: "Deploy customizable and scalable wallets for your business", icon: Wallet, link: "/developers/wallets" },
         { title: "Startups", description: "Launch your business with the world's leader in crypto", icon: Rocket, link: "/developers/startups" },
-        { title: "Stablecoins", description: "Access USDC and Coinbase Custom Stablecoins", icon: Anchor, link: "/developers/stablecoins" },
+        { title: "Stablecoins", description: "Access USDC and  Custom Stablecoins", icon: Anchor, link: "/developers/stablecoins" },
     ]
     const Company = [
         { title: "About", description: "Powering the crypto economy", icon: Info, link: "/company/about" },
         { title: "Careers", description: "Work with us", icon: UserPlus, link: "/company/careers" },
         { title: "Affiliates", description: "Help introduce the world to crypto", icon: Users, link: "/company/affiliates" },
         { title: "Support", description: "Find answers to your questions", icon: HelpCircle, link: "/company/support" },
-        { title: "Blog", description: "Read the latest from Coinbase", icon: Newspaper, link: "/company/blog" },
+        { title: "Blog", description: "Read the latest from ", icon: Newspaper, link: "/company/blog" },
         { title: "Security", description: "The most trusted & secure", icon: Shield, link: "/company/security" },
     ]
     const SideInfo = [
@@ -130,7 +130,7 @@ export const LandingHeader = ({ blue }) => {
         <div className="fixed top-0 left-0 w-full z-50" onMouseLeave={handleMouseOut}>
             <header className="flex bg-white w-full h-fit items-center px-4 sm:px-8 py-3 shadow-2xs shadow-gray-200">
                 <div className="flex items-center gap-4">
-                    <img src="/coinbase.png" alt="Coinbase Logo" className="w-auto h-6 sm:h-8" />
+                    <img src="/logo.png" alt=" Logo" className="w-auto h-6 sm:h-8" />
                     <ul className="hidden xl:flex justify-evenly gap-2 font-semibold text-base items-center">
                         <Link to="/explore">
                             <li className="hover:bg-gray-100 rounded-full px-3 py-2 cursor-pointer transition-colors">Cryptocurrencies</li>
@@ -159,7 +159,7 @@ export const LandingHeader = ({ blue }) => {
                             <Globe size={18} />
                         </button>
                         {isLoggedIn ? (
-                             <Link to="/profile">
+                             <Link to="/dashboard">
                                 <Button text="Account" className="px-4 py-2 bg-blue-50 text-blue-600 font-bold" />
                              </Link>
                         ) : (
@@ -179,7 +179,7 @@ export const LandingHeader = ({ blue }) => {
                             <Globe size={18} />
                         </button>
                         {isLoggedIn ? (
-                             <Link to="/profile">
+                             <Link to="/dashboard">
                                 <Button text="Account" className="px-4 py-2 bg-blue-50 text-blue-600 font-bold" />
                              </Link>
                         ) : (
@@ -335,4 +335,8 @@ export const LandingHeader = ({ blue }) => {
         </div>
     )
 }
+
+
+
+
 

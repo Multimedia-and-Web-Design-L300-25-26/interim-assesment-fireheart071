@@ -7,7 +7,7 @@ export default function Affiliates() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Coinbase Affiliate Program — Coinbase Clone</title>
+        <title> Affiliate Program —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -22,7 +22,7 @@ export default function Affiliates() {
             <span className="text-blue-600">growing the community.</span>
           </h1>
           <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-            Join the Coinbase Affiliate Program and earn a commission for every new user you refer to the world's most trusted exchange.
+            Join the  Affiliate Program and earn a commission for every new user you refer to the world's most trusted exchange.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button blue text="Become an affiliate" className="px-12 py-5 font-bold rounded-2xl text-lg" />
@@ -67,7 +67,7 @@ export default function Affiliates() {
       <section className="py-32 px-4 sm:px-10 bg-[#0a0b0d] text-white rounded-[60px] mx-4 sm:mx-10 mb-20">
          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
             <div className="w-full lg:w-1/2">
-               <h2 className="text-4xl md:text-5xl font-medium mb-10 leading-tight">Why partner <br /> with Coinbase?</h2>
+               <h2 className="text-4xl md:text-5xl font-medium mb-10 leading-tight">Why partner <br /> with ?</h2>
                <div className="space-y-6">
                   {[
                     "Industry-leading commission rates and payouts.",
@@ -96,4 +96,9 @@ export default function Affiliates() {
     </div>
   );
 }
+
+
+
+
+
 

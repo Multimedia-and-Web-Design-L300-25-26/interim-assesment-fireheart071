@@ -2,9 +2,14 @@ import { Route, Routes } from "react-router-dom"
 import { MainLayout } from "./components/layout/MainLayout";
 import { Explore } from "./pages/Explore.jsx";
 import { Landing } from "./pages/Landing.jsx";
-import { SignUp} from "./pages/SignUp.jsx";
-import {SignIn } from "./pages/SignIn.jsx"
+import { SignUp } from "./pages/SignUp.jsx";
+import { SignIn } from "./pages/SignIn.jsx"
 import Profile from "./pages/Profile.jsx";
+import { Dashboard } from "./pages/Dashboard.jsx";
+import { DashboardLayout } from "./components/layout/DashboardLayout";
+import Assets from "./pages/Assets.jsx";
+import Trade from "./pages/Trade.jsx";
+import Web3 from "./pages/Web3.jsx";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 // Individuals
@@ -12,7 +17,7 @@ import BuyAndSell from "./pages/Individuals/buyandsell.jsx";
 import Advanced from "./pages/Individuals/advanced.jsx";
 import BaseApp from "./pages/Individuals/baseapp.jsx";
 import Earn from "./pages/Individuals/earn.jsx";
-import CoinbaseOne from "./pages/Individuals/coinbaseone.jsx";
+import One from "./pages/Individuals/one.jsx";
 import PrivateClient from "./pages/Individuals/privateclient.jsx";
 import CreditCard from "./pages/Individuals/creditcard.jsx";
 import Onchain from "./pages/Individuals/onchain.jsx";
@@ -55,20 +60,27 @@ import Security from "./pages/Company/security.jsx";
 function App() {
   return (
     <Routes>
+      <Route element={<ProtectedRoute />}>
+        <Route element={<DashboardLayout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/assets" element={<Assets />} />
+          <Route path="/dashboard/trade" element={<Trade />} />
+          <Route path="/dashboard/explore" element={<Explore />} />
+          <Route path="/dashboard/web3" element={<Web3 />} />
+          <Route path="/profile" element={<Profile />} />
+        </Route>
+      </Route>
+
       <Route element={<MainLayout />}>
         <Route path="/" element={<Landing />} />
         <Route path="/explore" element={<Explore />} />
-        
-        <Route element={<ProtectedRoute />}>
-          <Route path="/profile" element={<Profile />} />
-        </Route>
 
         {/* Individuals */}
         <Route path="/individuals/buyandsell" element={<BuyAndSell />} />
         <Route path="/individuals/advanced" element={<Advanced />} />
         <Route path="/individuals/baseapp" element={<BaseApp />} />
         <Route path="/individuals/earn" element={<Earn />} />
-        <Route path="/individuals/coinbaseone" element={<CoinbaseOne />} />
+        <Route path="/individuals/one" element={<One />} />
         <Route path="/individuals/privateclient" element={<PrivateClient />} />
         <Route path="/individuals/creditcard" element={<CreditCard />} />
         <Route path="/individuals/onchain" element={<Onchain />} />
@@ -108,10 +120,14 @@ function App() {
         <Route path="/company/blog" element={<Blog />} />
         <Route path="/company/security" element={<Security />} />
       </Route>
-      <Route path="signup" element={<SignUp/>} />
-      <Route path="signin" element={<SignIn />}/>
+      <Route path="signup" element={<SignUp />} />
+      <Route path="signin" element={<SignIn />} />
     </Routes>
   );
 }
 
 export default App;
+
+
+
+

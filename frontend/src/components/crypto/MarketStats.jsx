@@ -72,3 +72,7 @@ export const MarketStats = ({ cryptos = [] }) => {
 };
 
 export default MarketStats;
+
+
+
+

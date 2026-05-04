@@ -7,7 +7,7 @@ export default function Wallets() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Wallet Infrastructure for Developers — Coinbase Clone</title>
+        <title>Wallet Infrastructure for Developers —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -112,4 +112,9 @@ export default function Wallets() {
     </div>
   );
 }
+
+
+
+
+
 

@@ -20,7 +20,7 @@ export function SignUp() {
       const response = await registerUser({ name, email, password });
       if (response.data.success) {
         localStorage.setItem('token', response.data.token);
-        navigate("/");
+        navigate("/dashboard");
       }
     } catch (err) {
       setError(err.response?.data?.message || "Registration failed. Please try again.");
@@ -32,12 +32,12 @@ export function SignUp() {
   return (
     <div className="min-h-screen bg-[#070809] text-white relative overscroll-x-none overflow-x-hidden">
       <Helmet>
-        <title>Sign Up — Coinbase Clone</title>
+        <title>Sign Up</title>
       </Helmet>
       <header className="fixed top-0 left-0 right-0 flex items-center justify-between px-6 py-4">
         <div className="flex items-center">
           <Link to="/">
-            <img src="/coinbase.png" className="h-10 w-10 filter-[brightness(0)_saturate(100%)_invert(100%)_sepia(10%)_saturate(657%)_hue-rotate(230deg)_brightness(111%)_contrast(100%)]" alt="" />
+            <img src="/logo.png" className="h-10 w-10 filter-[brightness(0)_saturate(100%)_invert(100%)_sepia(10%)_saturate(657%)_hue-rotate(230deg)_brightness(111%)_contrast(100%)]" alt="" />
           </Link>
         </div>
       </header>
@@ -45,7 +45,7 @@ export function SignUp() {
       <main className="min-h-screen flex items-center justify-center px-4 pt-40">
         <div className="w-full sm:w-[30%]  max-w-md">
           <h1 className="text-2xl font-bold mb-3">Create your account</h1>
-          <p className="text-sm text-slate-400 mb-6">Access all that Coinbase has to offer with a single account.</p>
+          <p className="text-sm text-slate-400 mb-6">Access all that  has to offer with a single account.</p>
 
           {error && <div className="bg-red-500/20 text-red-500 p-3 rounded-md mb-4 text-sm">{error}</div>}
 
@@ -115,3 +115,8 @@ export function SignUp() {
     </div>
   );
 }
+
+
+
+
+

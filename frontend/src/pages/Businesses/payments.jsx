@@ -7,7 +7,7 @@ export default function Payments() {
   return (
     <div className="bg-[#f8f9fb] min-h-screen">
       <Helmet>
-        <title>Global Payments Infrastructure — Coinbase Clone</title>
+        <title>Global Payments Infrastructure —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -97,7 +97,7 @@ export default function Payments() {
             <div className="w-full md:w-1/2">
                <h2 className="text-4xl md:text-5xl font-medium mb-10 leading-tight">Modernizing the <br /> supply chain.</h2>
                <p className="text-xl text-gray-400 mb-12">
-                  "By using Coinbase's payment infrastructure, we've reduced our cross-border settlement times from 4 days to 4 seconds, saving us millions in working capital every year."
+                  "By using 's payment infrastructure, we've reduced our cross-border settlement times from 4 days to 4 seconds, saving us millions in working capital every year."
                </p>
                <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-blue-600 rounded-full" />
@@ -139,4 +139,9 @@ export default function Payments() {
     </div>
   );
 }
+
+
+
+
+
 

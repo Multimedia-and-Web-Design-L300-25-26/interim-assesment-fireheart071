@@ -7,7 +7,7 @@ export default function Staking() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Institutional Staking Solutions — Coinbase Clone</title>
+        <title>Institutional Staking Solutions —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -57,7 +57,7 @@ export default function Staking() {
               {
                 icon: <Shield className="text-blue-600" />,
                 title: "Safety First",
-                desc: "Integrated with Coinbase Custody. Your assets remain in cold storage even while staked."
+                desc: "Integrated with  Custody. Your assets remain in cold storage even while staked."
               },
               {
                 icon: <Zap className="text-blue-600" />,
@@ -105,7 +105,7 @@ export default function Staking() {
                <div className="bg-white/5 p-12 rounded-[48px] border border-white/10 text-center">
                   <h3 className="text-3xl font-bold mb-6">Start earning today.</h3>
                   <p className="text-gray-400 text-lg mb-10">
-                    Join the thousands of institutions that trust Coinbase to manage their staked assets.
+                    Join the thousands of institutions that trust  to manage their staked assets.
                   </p>
                   <Button blue text="Apply for Staking" className="px-12 py-5 font-bold rounded-2xl" />
                </div>
@@ -115,4 +115,9 @@ export default function Staking() {
     </div>
   );
 }
+
+
+
+
+
 

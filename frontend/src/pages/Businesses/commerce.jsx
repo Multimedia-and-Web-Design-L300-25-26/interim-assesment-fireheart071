@@ -7,7 +7,7 @@ export default function Commerce() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Coinbase Commerce: Accept Crypto Payments — Coinbase Clone</title>
+        <title> Commerce: Accept Crypto Payments —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -65,7 +65,7 @@ export default function Commerce() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
              <h2 className="text-4xl font-medium mb-6">Integrated with the tools you use.</h2>
-             <p className="text-xl text-gray-500">Connect Coinbase Commerce to your existing workflow in minutes.</p>
+             <p className="text-xl text-gray-500">Connect  Commerce to your existing workflow in minutes.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -91,12 +91,12 @@ export default function Commerce() {
       <section className="py-32 px-4 sm:px-10 bg-white">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-20">
            <div className="w-full md:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-medium mb-8 leading-tight">Why choose <br /> Coinbase Commerce?</h2>
+              <h2 className="text-4xl md:text-5xl font-medium mb-8 leading-tight">Why choose <br />  Commerce?</h2>
               <div className="space-y-8">
                  {[
                    { title: "Zero Volatility", desc: "Automatically convert crypto to USDC or fiat to avoid price swings." },
                    { title: "Global Reach", desc: "Accept payments from anyone, anywhere, without borders or high fees." },
-                   { title: "Secure & Compliant", desc: "Built on the same secure infrastructure as the Coinbase exchange." },
+                   { title: "Secure & Compliant", desc: "Built on the same secure infrastructure as the  exchange." },
                    { title: "Low Transaction Fees", desc: "Just 1% flat fee on all transactions. No hidden costs." }
                  ].map((item, i) => (
                    <div key={i} className="flex gap-4">
@@ -121,7 +121,7 @@ export default function Commerce() {
                     <div className="h-10 w-full bg-gray-50 rounded-xl" />
                     <div className="h-10 w-full bg-gray-50 rounded-xl" />
                  </div>
-                 <Button blue text="Pay with Coinbase" className="w-full py-4 rounded-xl font-bold" />
+                 <Button blue text="Pay with " className="w-full py-4 rounded-xl font-bold" />
               </div>
            </div>
         </div>
@@ -140,4 +140,9 @@ export default function Commerce() {
     </div>
   );
 }
+
+
+
+
+
 

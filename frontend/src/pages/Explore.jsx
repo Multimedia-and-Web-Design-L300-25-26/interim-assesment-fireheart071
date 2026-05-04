@@ -61,7 +61,7 @@ const Sidebar = ({ gainers, newListings, loading }) => (
     <div className="p-4 bg-white rounded-lg border border-slate-200">
       <div className="flex items-center justify-between">
         <div>
-          <h5 className="text-sm font-semibold">New on Coinbase</h5>
+          <h5 className="text-sm font-semibold">New on </h5>
         </div>
         <div className="flex items-center gap-2 text-slate-400">
           <button className="p-1 rounded-full hover:bg-slate-100"><ChevronLeft size={16} /></button>
@@ -127,7 +127,7 @@ export function Explore() {
   return (
     <div className="bg-slate-50 py-8 min-h-screen">
       <Helmet>
-        <title>Explore — Coinbase Clone</title>
+        <title>Explore</title>
       </Helmet>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -135,7 +135,7 @@ export function Explore() {
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-4 gap-4">
               <div>
                 <h1 className="text-2xl font-bold">Explore crypto</h1>
-                <div className="mt-1 text-sm text-slate-600">Coinbase 50 Index is down <span className="text-red-600">↓ 0.14%</span> <span className="text-slate-400">(24hrs)</span></div>
+                <div className="mt-1 text-sm text-slate-600"> 50 Index is down <span className="text-red-600">↓ 0.14%</span> <span className="text-slate-400">(24hrs)</span></div>
               </div>
               <div className="w-3/4 md:w-1/3 lg:w-2/5">
                 <div className="flex items-center bg-gray-100 rounded-full px-4 py-2">
@@ -178,3 +178,8 @@ export function Explore() {
     </div>
   );
 }
+
+
+
+
+

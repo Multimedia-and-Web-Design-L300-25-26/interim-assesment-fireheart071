@@ -7,7 +7,7 @@ export default function Security() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Security at Coinbase: Keeping Your Assets Safe — Coinbase Clone</title>
+        <title>Security at : Keeping Your Assets Safe —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -98,7 +98,7 @@ export default function Security() {
                  "Enable 2FA with a hardware key or authenticator app.",
                  "Never share your password or seed phrase with anyone.",
                  "Watch out for phishing attempts and fake support agents.",
-                 "Use a strong, unique password for your Coinbase account."
+                 "Use a strong, unique password for your  account."
                ].map((tip, i) => (
                  <div key={i} className="p-6 bg-gray-50 rounded-2xl border border-gray-100 font-medium">
                     {tip}
@@ -110,4 +110,9 @@ export default function Security() {
     </div>
   );
 }
+
+
+
+
+
 

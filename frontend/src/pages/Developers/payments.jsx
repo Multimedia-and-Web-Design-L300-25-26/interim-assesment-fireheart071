@@ -7,7 +7,7 @@ export default function DevPayments() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Coinbase Payments API: Accept Crypto Globally — Coinbase Clone</title>
+        <title> Payments API: Accept Crypto Globally —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -38,7 +38,7 @@ export default function DevPayments() {
                    <div className="w-3 h-3 rounded-full bg-green-500" />
                 </div>
                 <p className="mb-4">// Create a charge</p>
-                <p>const charge = await coinbase.charges.create({'{'}</p>
+                <p>const charge = await .charges.create({'{'}</p>
                 <p className="pl-4">name: "Coffee Subscription",</p>
                 <p className="pl-4">description: "Monthly plan",</p>
                 <p className="pl-4">pricing_type: "fixed_price",</p>
@@ -104,4 +104,9 @@ export default function DevPayments() {
     </div>
   );
 }
+
+
+
+
+
 

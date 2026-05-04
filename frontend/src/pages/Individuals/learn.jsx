@@ -37,7 +37,7 @@ export default function Learn() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Learn Crypto: Guides & Tips — Coinbase Clone</title>
+        <title>Learn Crypto: Guides & Tips</title>
       </Helmet>
 
       {/* Header Section */}
@@ -52,9 +52,9 @@ export default function Learn() {
             </div>
             <div className="relative w-full md:w-96">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
-              <input 
-                type="text" 
-                placeholder="Search for guides..." 
+              <input
+                type="text"
+                placeholder="Search for guides..."
                 className="w-full pl-12 pr-4 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 transition-all outline-none"
               />
             </div>
@@ -62,11 +62,10 @@ export default function Learn() {
 
           <div className="flex gap-4 mt-12 overflow-x-auto pb-4 no-scrollbar">
             {categories.map((cat, i) => (
-              <button 
-                key={i} 
-                className={`px-6 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition-all ${
-                  i === 0 ? "bg-black text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                }`}
+              <button
+                key={i}
+                className={`px-6 py-2.5 rounded-full text-sm font-bold whitespace-nowrap transition-all ${i === 0 ? "bg-black text-white" : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                  }`}
               >
                 {cat}
               </button>
@@ -80,19 +79,19 @@ export default function Learn() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
             <div className="relative group cursor-pointer overflow-hidden rounded-[40px]">
-              <img 
-                src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1200" 
-                alt="Featured" 
+              <img
+                src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=1200"
+                alt="Featured"
                 className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-10 flex flex-col justify-end text-white">
                 <span className="text-sm font-bold uppercase tracking-widest mb-4 opacity-80">Featured Guide</span>
                 <h2 className="text-4xl font-bold mb-6 group-hover:text-blue-400 transition-colors">The Crypto Tax Guide 2024: Everything You Need to Know</h2>
                 <div className="flex items-center gap-4">
-                   <div className="flex items-center gap-2">
-                      <BookOpen size={16} />
-                      <span className="text-sm font-medium">15 min read</span>
-                   </div>
+                  <div className="flex items-center gap-2">
+                    <BookOpen size={16} />
+                    <span className="text-sm font-medium">15 min read</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -122,9 +121,9 @@ export default function Learn() {
             {articles.map((article, i) => (
               <div key={i} className="group cursor-pointer">
                 <div className="overflow-hidden rounded-[32px] mb-6">
-                  <img 
-                    src={article.image} 
-                    alt={article.title} 
+                  <img
+                    src={article.image}
+                    alt={article.title}
                     className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
@@ -146,30 +145,30 @@ export default function Learn() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-12 mb-16">
             <div className="max-w-xl">
-               <h2 className="text-4xl md:text-5xl font-medium mb-6">Watch and learn.</h2>
-               <p className="text-xl text-gray-400">Short, digestible videos to help you master the crypto markets.</p>
+              <h2 className="text-4xl md:text-5xl font-medium mb-6">Watch and learn.</h2>
+              <p className="text-xl text-gray-400">Short, digestible videos to help you master the crypto markets.</p>
             </div>
             <Button text="View all videos" className="bg-white text-black px-8 py-4 font-bold" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-             {[
-               { title: "Coinbase 101: Your First Trade", duration: "2:45" },
-               { title: "Securing Your Account with 2FA", duration: "1:30" }
-             ].map((video, i) => (
-               <div key={i} className="relative aspect-video rounded-[32px] overflow-hidden group cursor-pointer">
-                  <div className="absolute inset-0 bg-gray-800" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                     <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                        <Play fill="white" className="text-white ml-1" size={32} />
-                     </div>
+            {[
+              { title: " 101: Your First Trade", duration: "2:45" },
+              { title: "Securing Your Account with 2FA", duration: "1:30" }
+            ].map((video, i) => (
+              <div key={i} className="relative aspect-video rounded-[32px] overflow-hidden group cursor-pointer">
+                <div className="absolute inset-0 bg-gray-800" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Play fill="white" className="text-white ml-1" size={32} />
                   </div>
-                  <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
-                     <h4 className="text-xl font-bold mb-1">{video.title}</h4>
-                     <p className="text-sm text-gray-400">{video.duration}</p>
-                  </div>
-               </div>
-             ))}
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+                  <h4 className="text-xl font-bold mb-1">{video.title}</h4>
+                  <p className="text-sm text-gray-400">{video.duration}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -181,9 +180,9 @@ export default function Learn() {
           <h2 className="text-4xl font-bold mb-6">Weekly market insights.</h2>
           <p className="text-xl text-gray-500 mb-10">Get the latest crypto news, technical analysis, and market updates delivered to your inbox every Friday.</p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <input 
-              type="email" 
-              placeholder="Enter your email" 
+            <input
+              type="email"
+              placeholder="Enter your email"
               className="flex-1 px-6 py-4 bg-gray-50 border-none rounded-2xl focus:ring-2 focus:ring-blue-600 outline-none"
             />
             <Button blue text="Subscribe" className="px-10 py-4 font-bold" />
@@ -194,4 +193,10 @@ export default function Learn() {
     </div>
   );
 }
+
+
+
+
+
+
 

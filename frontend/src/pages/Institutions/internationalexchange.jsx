@@ -7,7 +7,7 @@ export default function InternationalExchange() {
   return (
     <div className="bg-[#0a0b0d] text-white min-h-screen">
       <Helmet>
-        <title>Coinbase International Exchange — Coinbase Clone</title>
+        <title> International Exchange —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -128,4 +128,9 @@ export default function InternationalExchange() {
     </div>
   );
 }
+
+
+
+
+
 

@@ -7,7 +7,7 @@ export default function Startups() {
   return (
     <div className="bg-[#0a0b0d] text-white min-h-screen">
       <Helmet>
-        <title>Coinbase for Startups: Build Your Crypto Vision — Coinbase Clone</title>
+        <title> for Startups: Build Your Crypto Vision —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -76,8 +76,8 @@ export default function Startups() {
               <h2 className="text-4xl md:text-5xl font-medium leading-tight text-white">More than just code.</h2>
               <div className="space-y-8">
                  {[
-                   { title: "Coinbase Ventures", desc: "Access to early-stage funding from one of the most active investors in crypto." },
-                   { title: "Cloud Credits", desc: "Up to $25,000 in credits for eligible startups to build on Coinbase Cloud." },
+                   { title: " Ventures", desc: "Access to early-stage funding from one of the most active investors in crypto." },
+                   { title: "Cloud Credits", desc: "Up to $25,000 in credits for eligible startups to build on  Cloud." },
                    { title: "Go-to-market Support", desc: "Leverage our 100M+ user base to accelerate your growth." }
                  ].map((item, i) => (
                    <div key={i} className="flex gap-6">
@@ -92,15 +92,15 @@ export default function Startups() {
            </div>
            <div className="bg-white/5 p-12 rounded-[48px] border border-white/10 relative overflow-hidden">
               <pre className="text-blue-400 font-mono text-sm sm:text-base overflow-x-auto p-4">
-{`const coinbase = require('coinbase-cloud');
+{`const  = require('-cloud');
 
 async function launchStartup() {
   const idea = await buildVision();
-  const funding = await coinbase.ventures.apply();
+  const funding = await .ventures.apply();
   
   if (funding.approved) {
     console.log("Ready for takeoff 🚀");
-    return coinbase.cloud.deploy(idea);
+    return .cloud.deploy(idea);
   }
 }
 
@@ -126,4 +126,9 @@ launchStartup();`}
     </div>
   );
 }
+
+
+
+
+
 

@@ -7,7 +7,7 @@ export default function Custody() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Coinbase Custody: Secure Institutional Storage — Coinbase Clone</title>
+        <title> Custody: Secure Institutional Storage —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -23,7 +23,7 @@ export default function Custody() {
               <span className="text-blue-600">secure storage.</span>
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed max-w-lg">
-              Coinbase Custody is the largest and most trusted digital asset custodian in the world, providing cold storage for thousands of institutions.
+               Custody is the largest and most trusted digital asset custodian in the world, providing cold storage for thousands of institutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button blue text="Get started with Custody" className="px-10 py-5 font-bold rounded-2xl text-lg" />
@@ -122,4 +122,9 @@ export default function Custody() {
     </div>
   );
 }
+
+
+
+
+
 

@@ -46,15 +46,14 @@ export default function Profile() {
   }
 
   return (
-    <div className="bg-slate-50 min-h-screen py-12">
+    <div className="max-w-4xl mx-auto">
       <Helmet>
-        <title>User Profile — Coinbase Clone</title>
+        <title>User Profile</title>
       </Helmet>
       
-      <div className="max-w-3xl mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-8">Settings</h1>
-        
-        <div className="bg-white rounded-[24px] shadow-sm border border-slate-200 overflow-hidden">
+      <h1 className="text-3xl font-bold mb-8">Settings</h1>
+      
+      <div className="bg-white rounded-[24px] shadow-sm border border-slate-200 overflow-hidden">
           <div className="p-8 border-b border-slate-100">
             <div className="flex items-center gap-6">
               <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl font-bold">
@@ -114,7 +113,11 @@ export default function Profile() {
             </div>
           </div>
         </div>
-      </div>
     </div>
   );
 }
+
+
+
+
+

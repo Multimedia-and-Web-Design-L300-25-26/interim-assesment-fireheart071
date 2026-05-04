@@ -1,10 +1,21 @@
+import { useEffect } from "react";
 import { Button } from "../components/common/button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-export const Landing = () => (
+
+export const Landing = () => {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (localStorage.getItem('token')) {
+            navigate("/dashboard");
+        }
+    }, [navigate]);
+
+    return (
     <>
     <Helmet>
-            <title>Home — Coinbase Clone</title>
+            <title>Home</title>
           </Helmet>
         <div>
             <section className="flex flex-col md:flex-row py-12 sm:py-18 px-4 sm:px-10 w-full items-center max-w-7xl mx-auto gap-8">
@@ -44,7 +55,7 @@ export const Landing = () => (
                     <div className="flex gap-6 mb-8 text-[15px] font-semibold text-gray-400 pb-2">
                         <button className="bg-[#2b2b2b] text-white px-4 py-1.5 rounded-full transition-colors">Tradable</button>
                         <button className="px-2 py-1.5 hover:text-white transition-colors">Top gainers</button>
-                        <button className="px-2 py-1.5 hover:text-white transition-colors">New on Coinbase</button>
+                        <button className="px-2 py-1.5 hover:text-white transition-colors">New on </button>
                     </div>
 
                     {/* List */}
@@ -136,7 +147,7 @@ export const Landing = () => (
                             Powerful tools, designed for the advanced trader.
                         </h2>
                         <p className="text-gray-500 text-lg leading-relaxed max-w-lg">
-                            Powerful analytical tools with the safety and security of Coinbase deliver the ultimate trading experience. Tap into sophisticated charting capabilities, real-time order books, and deep liquidity across hundreds of markets.
+                            Powerful analytical tools with the safety and security of  deliver the ultimate trading experience. Tap into sophisticated charting capabilities, real-time order books, and deep liquidity across hundreds of markets.
                         </p>
                         <Link to="/individuals/advanced">
                             <Button black text='Start trading' className="px-8 py-4 font-semibold rounded-full hover:bg-gray-800" />
@@ -144,14 +155,14 @@ export const Landing = () => (
                     </div>
                 </div>
 
-                {/* Coinbase One Section */}
+                {/*  One Section */}
                 <div className="flex flex-col md:flex-row w-full gap-12 justify-center items-center">
                     <div className="w-full md:w-1/2 flex flex-col gap-6 order-2 md:order-1">
                         <div className="flex items-center gap-2 border border-gray-200 rounded-full px-4 py-1.5 w-fit">
                             <div className="w-5 h-5 bg-black rounded-full flex items-center justify-center">
                                 <span className="text-white text-[10px] font-bold">O</span>
                             </div>
-                            <span className="text-[13px] font-bold tracking-widest text-gray-800 uppercase">Coinbase One</span>
+                            <span className="text-[13px] font-bold tracking-widest text-gray-800 uppercase"> One</span>
                         </div>
                         <h2 className="text-5xl font-medium tracking-tight leading-tight">
                             Zero trading fees, more rewards.
@@ -159,13 +170,13 @@ export const Landing = () => (
                         <p className="text-gray-500 text-lg leading-relaxed max-w-md">
                             Get more out of crypto with one membership: zero trading fees, boosted rewards, priority support, and more.
                         </p>
-                        <Link to="/individuals/coinbaseone">
+                        <Link to="/individuals/one">
                             <Button black text='Claim free trial' className="px-8 py-4 font-semibold rounded-full hover:bg-gray-800" />
                         </Link>
                     </div>
                     <div className="w-full md:w-1/2 order-1 md:order-2 px-4 sm:px-0">
                         <div className="bg-[#f0f2f5] rounded-[32px] p-6 sm:p-12 flex justify-center items-center shadow-inner">
-                            <img src="/zero_fees_us.png" alt="Coinbase One Mobile" className="w-full max-w-[400px] h-auto object-contain drop-shadow-2xl translate-y-4" />
+                            <img src="/zero_fees_us.png" alt=" One Mobile" className="w-full max-w-[400px] h-auto object-contain drop-shadow-2xl translate-y-4" />
                         </div>
                     </div>
                 </div>
@@ -221,7 +232,7 @@ export const Landing = () => (
                                 USDC: The digital dollar for the global crypto economy
                             </h3>
                             <p className="text-gray-500 text-lg leading-relaxed line-clamp-3">
-                                Coinbase believes crypto will be part of the solution for creating an open financial system that is both more efficient and more...
+                                 believes crypto will be part of the solution for creating an open financial system that is both more efficient and more...
                             </p>
                         </div>
 
@@ -278,7 +289,7 @@ export const Landing = () => (
 
                 <div className="max-w-5xl mx-auto text-center flex flex-col gap-4">
                     <h5 className="text-[11px] font-bold text-gray-400 uppercase tracking-wider">
-                        DEX trading is offered by Coinbase Bermuda Technologies Ltd.
+                        DEX trading is offered by  Bermuda Technologies Ltd.
                     </h5>
                     <p className="text-[11px] leading-relaxed text-gray-400 max-w-2xl mx-auto">
                         Products and features may not be available in all regions. Information is for informational purposes only, and is not (i) an offer, or solicitation of an offer, to invest in, or to buy or sell, any interests or shares, or to participate in any investment or trading strategy or (ii) intended to provide accounting, legal, or tax advice, or investment recommendations. Trading cryptocurrency comes with risk.
@@ -287,4 +298,10 @@ export const Landing = () => (
             </section>
         </div>
     </>
-)
+    );
+};
+
+
+
+
+

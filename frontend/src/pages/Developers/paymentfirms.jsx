@@ -7,7 +7,7 @@ export default function PaymentFirms() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Crypto Solutions for Payment Firms — Coinbase Clone</title>
+        <title>Crypto Solutions for Payment Firms —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -105,4 +105,9 @@ export default function PaymentFirms() {
     </div>
   );
 }
+
+
+
+
+
 

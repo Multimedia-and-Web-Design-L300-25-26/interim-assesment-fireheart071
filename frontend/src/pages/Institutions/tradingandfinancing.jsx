@@ -7,7 +7,7 @@ export default function TradingAndFinancing() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Institutional Trading & Financing — Coinbase Clone</title>
+        <title>Institutional Trading & Financing —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -106,4 +106,9 @@ export default function TradingAndFinancing() {
     </div>
   );
 }
+
+
+
+
+
 

@@ -7,7 +7,7 @@ export default function BaseApp() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Base: An Ethereum L2 built by Coinbase — Coinbase Clone</title>
+        <title>Base: An Ethereum L2 built by </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -15,8 +15,8 @@ export default function BaseApp() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
           <div className="w-full md:w-1/2 flex flex-col gap-8">
             <div className="flex items-center gap-2 text-blue-100 font-bold uppercase tracking-widest text-sm">
-               <Layers size={20} />
-               <span>Base Network</span>
+              <Layers size={20} />
+              <span>Base Network</span>
             </div>
             <h1 className="text-5xl sm:text-7xl font-medium tracking-tight leading-tight">
               A new way to <br />
@@ -31,15 +31,15 @@ export default function BaseApp() {
             </div>
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
-             <div className="relative">
-                <div className="w-64 h-64 sm:w-80 sm:h-80 bg-white rounded-full flex items-center justify-center shadow-2xl animate-pulse">
-                   <div className="w-48 h-48 sm:w-60 sm:h-60 bg-[#0052ff] rounded-full flex items-center justify-center">
-                      <span className="text-white text-8xl font-black italic">B</span>
-                   </div>
+            <div className="relative">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 bg-white rounded-full flex items-center justify-center shadow-2xl animate-pulse">
+                <div className="w-48 h-48 sm:w-60 sm:h-60 bg-[#0052ff] rounded-full flex items-center justify-center">
+                  <span className="text-white text-8xl font-black italic">B</span>
                 </div>
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-300 rounded-full blur-2xl opacity-50" />
-                <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-800 rounded-full blur-3xl opacity-30" />
-             </div>
+              </div>
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-blue-300 rounded-full blur-2xl opacity-50" />
+              <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-blue-800 rounded-full blur-3xl opacity-30" />
+            </div>
           </div>
         </div>
       </section>
@@ -61,16 +61,16 @@ export default function BaseApp() {
               },
               {
                 icon: <Coins className="text-blue-600" />,
-                title: "Coinbase Integrated",
-                desc: "Seamlessly connect with Coinbase's ecosystem of products, users, and fiat on-ramps."
+                title: " Integrated",
+                desc: "Seamlessly connect with 's ecosystem of products, users, and fiat on-ramps."
               }
             ].map((feature, i) => (
               <div key={i} className="flex flex-col gap-6 text-center md:text-left">
-                 <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
-                    {feature.icon}
-                 </div>
-                 <h3 className="text-2xl font-bold">{feature.title}</h3>
-                 <p className="text-gray-500 leading-relaxed">{feature.desc}</p>
+                <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto md:mx-0">
+                  {feature.icon}
+                </div>
+                <h3 className="text-2xl font-bold">{feature.title}</h3>
+                <p className="text-gray-500 leading-relaxed">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -79,40 +79,46 @@ export default function BaseApp() {
 
       {/* Builder Section */}
       <section className="py-32 px-4 sm:px-10 bg-gray-50 rounded-[60px] mx-4 sm:mx-10 mb-20">
-         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
-            <div className="w-full lg:w-1/2">
-               <h2 className="text-4xl md:text-5xl font-medium mb-10 leading-tight">Built for builders, <br /> by builders.</h2>
-               <p className="text-xl text-gray-600 leading-relaxed mb-10">
-                  Base is an open-source project, built in collaboration with Optimism. We're committed to the Superchain vision.
-               </p>
-               <div className="flex flex-col gap-6">
-                  {[
-                    "EVM-equivalent for easy porting from Ethereum.",
-                    "Access to Coinbase's 110M+ users.",
-                    "Robust developer tooling and documentation.",
-                    "Integrated with the OP Stack ecosystem."
-                  ].map((text, i) => (
-                    <div key={i} className="flex gap-4">
-                       <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center shrink-0">
-                          <ArrowRight size={14} className="text-white" />
-                       </div>
-                       <p className="text-lg text-gray-700 font-medium">{text}</p>
-                    </div>
-                  ))}
-               </div>
-            </div>
-            <div className="w-full lg:w-1/2">
-               <div className="bg-white p-12 rounded-[48px] shadow-xl border border-gray-100">
-                  <h3 className="text-2xl font-bold mb-6 text-center">Ready to go on-chain?</h3>
-                  <div className="space-y-4">
-                     <Button blue text="Explore Ecosystem" className="w-full py-5 rounded-2xl font-bold" />
-                     <Button text="Read Documentation" className="w-full py-5 rounded-2xl font-bold border border-gray-200 hover:bg-gray-50" />
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
+          <div className="w-full lg:w-1/2">
+            <h2 className="text-4xl md:text-5xl font-medium mb-10 leading-tight">Built for builders, <br /> by builders.</h2>
+            <p className="text-xl text-gray-600 leading-relaxed mb-10">
+              Base is an open-source project, built in collaboration with Optimism. We're committed to the Superchain vision.
+            </p>
+            <div className="flex flex-col gap-6">
+              {[
+                "EVM-equivalent for easy porting from Ethereum.",
+                "Access to 's 110M+ users.",
+                "Robust developer tooling and documentation.",
+                "Integrated with the OP Stack ecosystem."
+              ].map((text, i) => (
+                <div key={i} className="flex gap-4">
+                  <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center shrink-0">
+                    <ArrowRight size={14} className="text-white" />
                   </div>
-               </div>
+                  <p className="text-lg text-gray-700 font-medium">{text}</p>
+                </div>
+              ))}
             </div>
-         </div>
+          </div>
+          <div className="w-full lg:w-1/2">
+            <div className="bg-white p-12 rounded-[48px] shadow-xl border border-gray-100">
+              <h3 className="text-2xl font-bold mb-6 text-center">Ready to go on-chain?</h3>
+              <div className="space-y-4">
+                <Button blue text="Explore Ecosystem" className="w-full py-5 rounded-2xl font-bold" />
+                <Button text="Read Documentation" className="w-full py-5 rounded-2xl font-bold border border-gray-200 hover:bg-gray-50" />
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
 }
+
+
+
+
+
+
 

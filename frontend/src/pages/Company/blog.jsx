@@ -7,15 +7,15 @@ export default function Blog() {
   const posts = [
     {
       category: "Company News",
-      title: "Coinbase and Google Cloud partner to drive Web3 innovation",
+      title: " and Google Cloud partner to drive Web3 innovation",
       excerpt: "Today, we're announcing a strategic partnership to enable the Web3 ecosystem with Google Cloud's infrastructure.",
       date: "Oct 11, 2023",
       image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&q=80&w=800"
     },
     {
       category: "Product Updates",
-      title: "Introducing the new Coinbase Wallet experience",
-      excerpt: "We've redesigned Coinbase Wallet from the ground up to make it easier to explore the world of DeFi and NFTs.",
+      title: "Introducing the new  Wallet experience",
+      excerpt: "We've redesigned  Wallet from the ground up to make it easier to explore the world of DeFi and NFTs.",
       date: "Oct 05, 2023",
       image: "https://images.unsplash.com/photo-1621761191319-c6fb62004040?auto=format&fit=crop&q=80&w=800"
     },
@@ -31,7 +31,7 @@ export default function Blog() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Coinbase Blog — Coinbase Clone</title>
+        <title> Blog —  </title>
       </Helmet>
 
       {/* Header */}
@@ -40,7 +40,7 @@ export default function Blog() {
            <div>
               <div className="flex items-center gap-2 text-blue-600 font-bold uppercase tracking-widest text-sm mb-4">
                  <BookOpen size={20} />
-                 <span>Coinbase Blog</span>
+                 <span> Blog</span>
               </div>
               <h1 className="text-5xl md:text-6xl font-medium tracking-tight">The latest from <br /> the crypto world.</h1>
            </div>
@@ -127,4 +127,9 @@ export default function Blog() {
     </div>
   );
 }
+
+
+
+
+
 

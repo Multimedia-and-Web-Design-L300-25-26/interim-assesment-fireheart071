@@ -7,7 +7,7 @@ export default function Business() {
   return (
     <div className="bg-white min-h-screen">
       <Helmet>
-        <title>Coinbase for Business: Institutional Crypto Solutions — Coinbase Clone</title>
+        <title> for Business: Institutional Crypto Solutions —  </title>
       </Helmet>
 
       {/* Hero Section */}
@@ -93,7 +93,7 @@ export default function Business() {
             <div className="space-y-12">
                <h2 className="text-4xl md:text-5xl font-medium">Built on trust and compliance.</h2>
                {[
-                 { icon: <ShieldCheck className="text-green-600" />, title: "Regulated and compliant", desc: "Coinbase is a publicly traded company that adheres to the highest standards of regulatory compliance." },
+                 { icon: <ShieldCheck className="text-green-600" />, title: "Regulated and compliant", desc: " is a publicly traded company that adheres to the highest standards of regulatory compliance." },
                  { icon: <BarChart3 className="text-blue-600" />, title: "Deep liquidity", desc: "Access the world's most liquid markets for Bitcoin, Ethereum, and other digital assets." },
                  { icon: <Users2 className="text-purple-600" />, title: "Expert support", desc: "Dedicated account management and 24/7 technical support for our business partners." }
                ].map((item, i) => (
@@ -125,7 +125,7 @@ export default function Business() {
       <section className="py-32 px-4 sm:px-10">
          <div className="max-w-4xl mx-auto text-center flex flex-col gap-8">
             <h2 className="text-4xl md:text-6xl font-medium">Scale your business with crypto.</h2>
-            <p className="text-xl text-gray-500">Join the thousands of businesses already using Coinbase to power their digital asset strategies.</p>
+            <p className="text-xl text-gray-500">Join the thousands of businesses already using  to power their digital asset strategies.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-4">
                <Button blue text="Open a business account" className="px-10 py-5 font-bold rounded-2xl" />
             </div>
@@ -134,4 +134,9 @@ export default function Business() {
     </div>
   );
 }
+
+
+
+
+
 

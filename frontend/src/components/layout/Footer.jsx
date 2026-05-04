@@ -6,7 +6,7 @@ export const Footer = () => (
             <div className="flex justify-center w-full pt-8">
                 <div className="grid gap-6 w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 items-start">
                     <div>
-                        <img src="/coinbase.png" alt="coinbase" className="w-auto h-8 sm:h-10" />
+                        <img src="/logo.png" alt="" className="w-auto h-8 sm:h-10" />
                     </div>
 
                     <div className="flex flex-col gap-7">
@@ -24,7 +24,7 @@ export const Footer = () => (
                         </div>
                         <div className="flex flex-col gap-1">
                             <span className="font-bold">Learn</span>
-                            {["Explore Market statistics", "Coinbase Bytes newsletter", "Crypto basics", "Tips & tutorials", "Crypto glossary", "Market updates", "What is Bitcoin?", "What is crypto?", "What is a blockchain?", "How to set up a crypto wallet?", "How to send crypto?", "Taxes"].map((item, index) => (
+                            {["Explore Market statistics", " Bytes newsletter", "Crypto basics", "Tips & tutorials", "Crypto glossary", "Market updates", "What is Bitcoin?", "What is crypto?", "What is a blockchain?", "How to set up a crypto wallet?", "How to send crypto?", "Taxes"].map((item, index) => (
                                 <span key={index} className="flex">{item}</span>
                             ))}
                         </div>
@@ -32,13 +32,13 @@ export const Footer = () => (
                     <div className="flex flex-col gap-7">
                         <div className="flex flex-col gap-1">
                             <span className="font-bold">Individuals</span>
-                            {[{ label: "Buy & sell", to: "/individuals/buyandsell" }, { label: "Earn free crypto", to: "/individuals/earn" }, { label: "Base App", to: "/individuals/baseapp" }, { label: "Coinbase One", to: "/individuals/coinbaseone" }, { label: "Debit Card", to: "/individuals/debitcard" }].map((item, index) => (
+                            {[{ label: "Buy & sell", to: "/individuals/buyandsell" }, { label: "Earn free crypto", to: "/individuals/earn" }, { label: "Base App", to: "/individuals/baseapp" }, { label: " One", to: "/individuals/one" }, { label: "Debit Card", to: "/individuals/debitcard" }].map((item, index) => (
                                 <Link key={index} to={item.to} className="flex text-blue-600">{item.label}</Link>
                             ))}
                         </div>
                         <div className="flex flex-col gap-1">
                             <span className="font-bold">Businesses</span>
-                            {[{ label: "Asset Listings", to: "/businesses/assetlistings" }, { label: "Coinbase Business", to: "/businesses/business" }, { label: "Payments", to: "/businesses/payments" }, { label: "Commerce", to: "/businesses/commerce" }].map((item, index) => (
+                            {[{ label: "Asset Listings", to: "/businesses/assetlistings" }, { label: " Business", to: "/businesses/business" }, { label: "Payments", to: "/businesses/payments" }, { label: "Commerce", to: "/businesses/commerce" }].map((item, index) => (
                                 <Link key={index} to={item.to} className="flex text-blue-600">{item.label}</Link>
                             ))}
                         </div>
@@ -98,7 +98,7 @@ export const Footer = () => (
                     <div className="w-full bg-gray-300 h-px"></div>
                 </div>
                 <div className="flex flex-col sm:flex-row justify-between gap-4 w-full">
-                    <div>© 2026 Coinbase <span className="text-gray-500">• Privacy • Terms & Conditions</span></div>
+                    <div>© 2026  <span className="text-gray-500">• Privacy • Terms & Conditions</span></div>
                     <div className="text-gray-500 inline-flex gap-2 justify-center items-center">
                         <img src="/globe1.svg" alt="Globe icon" className="w-5 h-5" />
                         <button> Global</button>
@@ -111,3 +111,7 @@ export const Footer = () => (
         </footer>
     </>
 )
+
+
+
+

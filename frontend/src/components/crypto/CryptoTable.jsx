@@ -98,3 +98,7 @@ export const CryptoTable = ({ cryptos = [], loading }) => {
 };
 
 export default CryptoTable;
+
+
+
+
