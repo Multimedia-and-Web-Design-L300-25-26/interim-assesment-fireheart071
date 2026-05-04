@@ -159,9 +159,9 @@ export const LandingHeader = ({ blue }) => {
                             <Globe size={18} />
                         </button>
                         {isLoggedIn ? (
-                             <Link to="/dashboard">
+                            <Link to="/dashboard">
                                 <Button text="Account" className="px-4 py-2 bg-blue-50 text-blue-600 font-bold" />
-                             </Link>
+                            </Link>
                         ) : (
                             <>
                                 <Link to='/signin'><Button text="Sign in" className='px-3 py-2' /></Link>
@@ -179,9 +179,9 @@ export const LandingHeader = ({ blue }) => {
                             <Globe size={18} />
                         </button>
                         {isLoggedIn ? (
-                             <Link to="/dashboard">
+                            <Link to="/dashboard">
                                 <Button text="Account" className="px-4 py-2 bg-blue-50 text-blue-600 font-bold" />
-                             </Link>
+                            </Link>
                         ) : (
                             <>
                                 <Link to='/signin' ><Button text="Sign in" className='px-3 py-2 text-sm hidden lg:inline-flex' /></Link>
@@ -217,8 +217,8 @@ export const LandingHeader = ({ blue }) => {
                             {!activeMenu && (
                                 <>
                                     <Link to="/explore" onClick={() => setMobileOpen(false)} className="block py-4 text-lg">Cryptocurrencies</Link>
-                                    {[ {name: 'Individuals', data: Individuals}, {name: 'Businesses', data: Businesses}, {name: 'Institutions', data: Institutions}, {name: 'Developers', data: Developers}, {name: 'Company', data: Company} ].map((cat) => (
-                                            <button key={cat.name} onClick={() => { handleHover(cat.data, cat.name); }} className="w-full text-left py-4 border-b flex items-center justify-between">{cat.name} <span className="text-slate-400">›</span></button>
+                                    {[{ name: 'Individuals', data: Individuals }, { name: 'Businesses', data: Businesses }, { name: 'Institutions', data: Institutions }, { name: 'Developers', data: Developers }, { name: 'Company', data: Company }].map((cat) => (
+                                        <button key={cat.name} onClick={() => { handleHover(cat.data, cat.name); }} className="w-full text-left py-4 border-b flex items-center justify-between">{cat.name} <span className="text-slate-400">›</span></button>
                                     ))}
                                 </>
                             )}
@@ -237,7 +237,7 @@ export const LandingHeader = ({ blue }) => {
                                                 key={idx}
                                                 to={item.link || '#'}
                                                 onClick={() => { setMobileOpen(false); setActiveMenu(null); }}
-                                                className="block px-3 py-3 rounded-md hover:bg-gray-50 flex items-start gap-3"
+                                                className="px-3 py-3 rounded-md hover:bg-gray-50 flex items-start gap-3"
                                             >
                                                 <div className="w-8 h-8 bg-slate-100 rounded-full flex items-center justify-center">{item.icon ? <item.icon size={16} /> : null}</div>
                                                 <div>
@@ -264,7 +264,7 @@ export const LandingHeader = ({ blue }) => {
             </div>
 
             {showLang && (
-                <div className={`absolute top-16 right-6 z-50 ${searchValue ? 'w-[44rem] lg:w-[44rem]' : 'w-80'} bg-white rounded-xl shadow-lg border border-slate-100`}> 
+                <div className={`absolute top-16 right-6 z-50 ${searchValue ? 'w-176 lg:w-176' : 'w-80'} bg-white rounded-xl shadow-lg border border-slate-100`}>
                     <div className="p-4">
                         <div className="flex items-center justify-between">
                             <h4 className="font-semibold text-slate-800">Language and region</h4>
@@ -287,7 +287,7 @@ export const LandingHeader = ({ blue }) => {
                             {searchValue || showSearch ? (
                                 <div className="mt-3 grid grid-cols-3 gap-4">
                                     <div className="col-span-3 flex gap-2">
-                                        {['Top','Crypto','Stocks','Predictions','Perpetuals','Futures'].map((c) => (
+                                        {['Top', 'Crypto', 'Stocks', 'Predictions', 'Perpetuals', 'Futures'].map((c) => (
                                             <button key={c} className="px-3 py-1 rounded-full bg-slate-100 text-sm font-medium">{c}</button>
                                         ))}
                                     </div>
