@@ -18,6 +18,7 @@ import { getProfile, logoutUser } from "../../utils/api";
 
 export function DashboardLayout() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const [user, setUser] = useState(null);
   const location = useLocation();
   const navigate = useNavigate();
@@ -80,26 +81,41 @@ export function DashboardLayout() {
           ))}
         </nav>
 
-        <div className="p-4 border-t border-slate-100">
-           <div className="flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 cursor-pointer group relative">
+        <div className="p-4 border-t border-slate-100 relative">
+           <div 
+             onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)}
+             className={`flex items-center gap-3 p-2 rounded-xl hover:bg-slate-50 cursor-pointer transition-colors ${isProfileMenuOpen ? 'bg-slate-50' : ''}`}
+           >
              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white text-xs font-bold">
                {user?.name?.charAt(0).toUpperCase()}
              </div>
              <div className="grow min-w-0">
                <p className="text-sm font-semibold text-slate-900 truncate">{user?.name}</p>
              </div>
-             <ChevronDown size={16} className="text-slate-400" />
-             
-             {/* Simple Tooltip/Menu on hover */}
-             <div className="absolute bottom-full left-0 mb-2 w-full bg-white border border-slate-100 shadow-xl rounded-2xl p-2 hidden group-hover:block">
-                <Link to="/profile" className="flex items-center gap-2 p-2 hover:bg-slate-50 rounded-lg text-sm text-slate-600">
+             <ChevronDown size={16} className={`text-slate-400 transition-transform ${isProfileMenuOpen ? 'rotate-180' : ''}`} />
+           </div>
+           
+           {/* Click-based Profile Menu */}
+           {isProfileMenuOpen && (
+             <div className="absolute bottom-full left-4 right-4 mb-2 bg-white border border-slate-100 shadow-xl rounded-2xl p-2 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
+                <Link 
+                  to="/profile" 
+                  onClick={() => setIsProfileMenuOpen(false)}
+                  className="flex items-center gap-2 p-2 hover:bg-slate-50 rounded-lg text-sm text-slate-600"
+                >
                   <User size={16} /> Profile Settings
                 </Link>
-                <button onClick={handleLogout} className="w-full flex items-center gap-2 p-2 hover:bg-red-50 rounded-lg text-sm text-red-600">
+                <button 
+                  onClick={() => {
+                    setIsProfileMenuOpen(false);
+                    handleLogout();
+                  }} 
+                  className="w-full flex items-center gap-2 p-2 hover:bg-red-50 rounded-lg text-sm text-red-600"
+                >
                   <LogOut size={16} /> Sign out
                 </button>
              </div>
-           </div>
+           )}
         </div>
       </aside>
 
